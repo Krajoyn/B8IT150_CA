@@ -19,10 +19,9 @@ def add():
   name = request.args.get('name')
   email = request.args.get('email')
   cur = mysql.connection.cursor() #create a connection to the SQL instance
-  s='''INSERT INTO students(studentName, email) VALUES('{}','{}');'''.format(name,email)
-  cur.execute(s)
+  s='''INSERT INTO students(studentName, email) VALUES(?,?);'''
+  cur.execute(s,(name,email))
   mysql.connection.commit()
-
   return '{"Result":"Success"}'
 
 @app.route("/delete") #Delete Student
