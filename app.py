@@ -14,6 +14,8 @@ app.config['MYSQL_DB'] = 'student'
 app.config['MYSQL_HOST'] = 'localhost' #for now
 mysql.init_app(app)
 
+print("Hello. App is starting")
+
 @app.route("/add") #Add Student
 def add():
   name = request.args.get('name')
