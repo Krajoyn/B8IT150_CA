@@ -6,28 +6,53 @@
 <title>Test API Client</title>
 <script>
 let doIt=()=>{
-  let tab=document.getElementById("tab1");
-  let rows=tab1.getElementsByTagName('tr');
-  fetch('https://akdbs.southindia.cloudapp.azure.com:8080/')
-    .then(response => response.json())
-    .then(data=>data.Results.forEach(  //.slice(0,3)
-      x=>{
-        let newRow=rows[0].cloneNode(true);
-        let divs=newRow.getElementsByTagName('td');
-        divs[0].innerHTML=x['ID'];
-        divs[1].innerHTML=x['Name'];
-        divs[2].innerHTML=x['Email'];
-        tab1.appendChild(newRow);
-      }
-    )
-  );
+let tab=document.getElementById("tab1");
+let rows=tab1.getElementsByTagName('tr');
+fetch('https://https://akdbs.southindia.cloudapp.azure.com:8080/')
+.then(response => response.json())
+.then(data=>{data.Results.forEach(
+x=>{
+let newRow=rows[0].cloneNode(true);
+let divs=newRow.getElementsByTagName('td');
+divs[0].innerHTML=x['ID'];
+divs[1].innerHTML=x['Name'];
+divs[2].innerHTML=x['Email'];
+tab1.appendChild(newRow);
 }
+);
+tab1.setAttribute("style","\"\"");
+}
+);
+}
+
 </script>
 </head>
 <body>
 <button onClick="doIt()">Press me</button>
 This is where the results turn up: <br/>
-<table id='tab1' bgcolor='blue'>
+<table id='tab1' bgcolor='blue' style="display: none">
 <tr><td>ID</td><td>Name</td><td>Email</td></tr>
-</table></body>
+</table>
+<BR/>
+
+<label for="id">ID: </label><input type="text" id="id" width="20" value="-1">
+<button id='delb'>Delete</button>
+<BR/>
+
+<label for="id">Email: </label><input type="text" id="email" width="20" value="-1">
+<button id='updb'>Update</button>
+
+</body>
+<script>
+baseURL='https://https://akdbs.southindia.cloudapp.azure.com:8080/'
+let delButton=document.getElementById('delb');
+let deleteStudent= (event)=>{
+let id=document.getElementById('id').value;
+fetch(baseURL+'delete?id='+id).then((resp)=>{
+alert("Student Deleted");//Obviously check success first
+});
+}
+
+delButton.addEventListener("click", deleteStudent);
+</script>
 </html>
