@@ -29,8 +29,8 @@ def add():
 def delete():
  id = request.args.get('id')
  cur = mysql.connection.cursor() #create a connection to the SQL instance
- s='''DELETE FROM students WHERE ID=?;'''
- cur.execute(s,id)
+ s='''DELETE s.* FROM students s WHERE studentID='{}';'''.format(id)
+ cur.execute(s)
  mysql.connection.commit()
  return '{"Result":"Success"}'
 
