@@ -44,15 +44,13 @@ This is where the results turn up.......: <br/>
 
 </body>
 <script>
-baseURL='https://akdbs.southindia.cloudapp.azure.com:8080/'
-let delButton=document.getElementById('delb');
-let deleteStudent= (event)=>{
-let id=document.getElementById('id').value;
-fetch(baseURL+'delete?id='+id).then((resp)=>{
-alert("Student Deleted");//Obviously check success first
-});
-}
-
-delButton.addEventListener("click", deleteStudent);
+let baseURL='https://akdbs.southindia.cloudapp.azure.com:8080/';
+let id=document.querySelector('input');
+let deleteButton=()=>{
+  fetch(baseURL+'delete?id='+document.querySelector('input').value).then((resp)=>{alert("Student Deleted");//Obviously check success first
+      }
+    );
+  }
+deleteButton.addEventListener("click", id);
 </script>
 </html>
