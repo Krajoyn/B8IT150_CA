@@ -43,14 +43,13 @@ This is where the results turn up.......: <br/>
 <button id='updb'>Update</button>
 
 </body>
+
 <script>
 let baseURL='https://akdbs.southindia.cloudapp.azure.com:8080/';
 let id=document.querySelector('input');
 let deleteButton=()=>{
-  fetch(baseURL+'delete?id='+document.querySelector('input').value).then((resp)=>{alert("Student Deleted");//Obviously check success first
-      }
-    );
-  }
+  fetch(baseURL+'delete?id='+document.querySelector('input').value).then((resp)=>{alert("Student Deleted");//Obviously check success first});}
+});}
 deleteButton.addEventListener("click", id);
 </script>
 </html>
