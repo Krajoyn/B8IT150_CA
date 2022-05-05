@@ -35,7 +35,7 @@ def delete():
  return '{"Result":"Success"}'
 
 @app.route("/update") #Delete Student
-def update:
+def update():
   name = request.args.get('name')
   email = request.args.get('email')
   id = request.args.get('id')
