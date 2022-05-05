@@ -53,8 +53,25 @@ let id=document.querySelector('input');
 let deleteButton=()=>{
   fetch(baseURL+'delete?id='+document.querySelector('input').value).then((resp)=>{alert("Student Deleted");//Obviously check success first});}
 });}
-// deleteButton.addEventListener("click", id);
 </script>
+
+
+
+
+<label for='updateID'>Enter ID to update</label>
+<input type='text' name='updateID' id='updateID'>
+
+<label for='updateName'>Enter name to update</label>
+<input type='text' name='updateName' id='updateName'>
+
+<label for='updateID'>Enter email to update</label>
+<input type='text' name='updateEmail' id='updateEmail'>
+
+<script>
+  let updateStudent=()=>{
+    fetc(baseURL+'update?id='+updateID.value+'&name='+updateName.value+'&email='+updateEmail.value.then((resp)=>{alert("Student Updated");});}
+</script>
+
 
 </body>
 </html>
