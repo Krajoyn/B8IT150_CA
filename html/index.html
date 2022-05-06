@@ -67,8 +67,7 @@ let deleteButton=()=>{
 
 <script>
   let updateStudent=()=>{
-    fetc(baseURL+'update?id='+updateID.value+'&name='+updateName.value+'&email='+updateEmail.value.then((resp)=>{alert("Student Updated");});}
-
+    fetc(baseURL+'update?id='+document.querySelector('input').value).then(resp=>(alert('Student Updated')));}
 
     // fetc(baseURL+'update?id='+updateID.value+'&name='+updateName.value+'&email='+updateEmail.value.then((resp)=>{alert("Student Updated");});}
 </script>
