@@ -37,15 +37,15 @@ This is where the results turn up.......: <br/>
 
 
 <!-- DELETE BUTTON  -->
-<input placeholder="Enter ID for deletion" type='int' id='id'>
-<button onClick="deleteButton('input')">Delete</button>
+<input placeholder="Enter ID for deletion" type='int' id='deleteId'>
+<button onClick="deleteButton()">Delete</button>
 
 <!-- DELETE STUDENT -->
 <script>
 let baseURL='https://akdbs.southindia.cloudapp.azure.com:8080/';
 let id=document.querySelector('input');
 let deleteButton=()=>{
-  fetch(baseURL+'delete?id='+document.querySelector('input').value).then((resp)=>{alert("Student Deleted");//Obviously check success first});}
+  fetch(baseURL+'delete?id='+document.querySelector('#deleteId').value).then((resp)=>{alert("Student Deleted");//Obviously check success first});}
 });}
 </script>
 
