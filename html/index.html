@@ -45,8 +45,7 @@ This is where the results turn up.......: <br/>
 let baseURL='https://akdbs.southindia.cloudapp.azure.com:8080/';
 let id=document.querySelector('input');
 let deleteStudent=()=>{
-  fetch(baseURL+'delete?id='+document.querySelector('#deleteId').value).then((resp)=>{alert("Student Deleted");//Obviously check success first});}
-});}
+  fetch(baseURL+'delete?id='+document.querySelector('#deleteId').value).then((resp)=>{alert("Student Deleted")});}
 </script>
 
 
@@ -54,13 +53,12 @@ let deleteStudent=()=>{
 <input placeholder="Enter ID for update" type='int' id='updateId'>
 <button onClick="updateStudent()">Update</button>
 
-
 <!-- UPDATE STUDENT  -->
 <script>
   let baseURL='https://akdbs.southindia.cloudapp.azure.com:8080/';
   let id=document.querySelector('input');
   let updateStudent=()=>{
-    fetc(baseURL+'update?id='+document.querySelector('#updateId').value).then(resp=>(alert('Student Updated')));}
+    fetc(baseURL+'update?id='+document.querySelector('#updateId').value).then(resp=>{alert('Student Updated')});}
 
     // fetc(baseURL+'update?id='+updateID.value+'&name='+updateName.value+'&email='+updateEmail.value.then((resp)=>{alert("Student Updated");});}
 </script>
