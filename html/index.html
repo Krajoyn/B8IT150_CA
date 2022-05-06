@@ -36,11 +36,11 @@ This is where the results turn up.......: <br/>
 <BR/>
 
 
+<!-- DELETE BUTTON  -->
 <input placeholder="Enter ID for deletion" type='int' id='id'>
 <button onClick="deleteButton('input')">Delete</button>
 
-
-
+<!-- DELETE STUDENT -->
 <script>
 let baseURL='https://akdbs.southindia.cloudapp.azure.com:8080/';
 let id=document.querySelector('input');
@@ -48,6 +48,11 @@ let deleteButton=()=>{
   fetch(baseURL+'delete?id='+document.querySelector('input').value).then((resp)=>{alert("Student Deleted");//Obviously check success first});}
 });}
 </script>
+
+
+<!-- UPDATE BUTTON  -->
+
+<!-- UPDATE STUDENT  -->
 
 <button onClick="updateButton('input')">Update</button>
 
@@ -63,6 +68,9 @@ let deleteButton=()=>{
 <script>
   let updateStudent=()=>{
     fetc(baseURL+'update?id='+updateID.value+'&name='+updateName.value+'&email='+updateEmail.value.then((resp)=>{alert("Student Updated");});}
+
+
+    // fetc(baseURL+'update?id='+updateID.value+'&name='+updateName.value+'&email='+updateEmail.value.then((resp)=>{alert("Student Updated");});}
 </script>
 
 
