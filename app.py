@@ -41,11 +41,9 @@ def update():
   id = request.args.get('id')
   cur = mysql.connection.cursor() #create a connection to the SQL instance
   s='''UPDATE s.* SET studentName='{}', email='{}' WHERE studentID='{}';'''
-  cur.execute(s)
+  cur.execute(s, (name, email, id))
   mysql.connection.commit()
   return '{"Result":"Success"}'
-
-
 
 
 @app.route("/") #Default - Show Data
