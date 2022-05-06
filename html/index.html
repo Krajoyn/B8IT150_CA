@@ -38,23 +38,37 @@ This is where the results turn up.......: <br/>
 
 <!-- DELETE BUTTON  -->
 <input placeholder="Enter ID for deletion" type='int' id='deleteId'>
-<button onClick="deleteButton()">Delete</button>
+<button onClick="deleteStudent()">Delete</button>
 
 <!-- DELETE STUDENT -->
 <script>
 let baseURL='https://akdbs.southindia.cloudapp.azure.com:8080/';
 let id=document.querySelector('input');
-let deleteButton=()=>{
+let deleteStudent=()=>{
   fetch(baseURL+'delete?id='+document.querySelector('#deleteId').value).then((resp)=>{alert("Student Deleted");//Obviously check success first});}
 });}
 </script>
 
 
 <!-- UPDATE BUTTON  -->
+<input placeholder="Enter ID for update" type='int' id='updateId'>
+<button onClick="updateStudent()">Update</button>
+
 
 <!-- UPDATE STUDENT  -->
+<script>
+  let baseURL='https://akdbs.southindia.cloudapp.azure.com:8080/';
+  let id=document.querySelector('input');
+  let updateStudent=()=>{
+    fetc(baseURL+'update?id='+document.querySelector('#updateId').value).then(resp=>(alert('Student Updated')));}
 
-<button onClick="updateButton('input')">Update</button>
+    // fetc(baseURL+'update?id='+updateID.value+'&name='+updateName.value+'&email='+updateEmail.value.then((resp)=>{alert("Student Updated");});}
+</script>
+
+
+
+
+<!-- <button onClick="updateButton('input')">Update</button>
 
 <label for='updateID'>Enter ID to update</label>
 <input type='text' name='updateID' id='updateID'>
@@ -64,13 +78,8 @@ let deleteButton=()=>{
 
 <label for='updateID'>Enter email to update</label>
 <input type='text' name='updateEmail' id='updateEmail'>
+ -->
 
-<script>
-  let updateStudent=()=>{
-    fetc(baseURL+'update?id='+document.querySelector('input').value).then(resp=>(alert('Student Updated')));}
-
-    // fetc(baseURL+'update?id='+updateID.value+'&name='+updateName.value+'&email='+updateEmail.value.then((resp)=>{alert("Student Updated");});}
-</script>
 
 
 </body>
