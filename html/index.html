@@ -1,82 +1,78 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width">
-<link rel="stylesheet" type="text/css" href="main.css">
-<title>Test API Client</title>
-<script>
-let doIt=()=>{
-let tab=document.getElementById("tab1");
-let rows=tab1.getElementsByTagName('tr');
-fetch('https://akdbs.southindia.cloudapp.azure.com:8080/')
-.then(response => response.json())
-.then(data=>{data.Results.forEach(
-x=>{
-let newRow=rows[0].cloneNode(true);
-let divs=newRow.getElementsByTagName('td');
-divs[0].innerHTML=x['ID'];
-divs[1].innerHTML=x['Name'];
-divs[2].innerHTML=x['Email'];
-tab1.appendChild(newRow);
-}
-);
-tab1.setAttribute("style","\"\"");
-}
-);
-}
-</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <title>Test API Client</title>
+  <script>
+  let doIt=()=>{
+  let tab=document.getElementById("tab1");
+  let rows=tab1.getElementsByTagName('tr');
+  fetch('https://akdbs.southindia.cloudapp.azure.com:8080/')
+  .then(response => response.json())
+  .then(data=>{data.Results.forEach(
+  x=>{
+  let newRow=rows[0].cloneNode(true);
+  let divs=newRow.getElementsByTagName('td');
+  divs[0].innerHTML=x['ID'];
+  divs[1].innerHTML=x['Name'];
+  divs[2].innerHTML=x['Email'];
+  tab1.appendChild(newRow);
+  }
+  );
+  tab1.setAttribute("style","\"\"");
+  }
+  );
+  }
+  </script>
 </head>
 
 <body>
-<button onClick="doIt()">Press me</button>
-This is where the results turn up.......: <br/>
-<table id='tab1' bgcolor='blue' style="display: none">
-<tr><td>ID</td><td>Name</td><td>Email</td></tr>
-</table>
-<BR/>
+
+  <button onClick="doIt()">Press me</button>
+  This is where the results turn up.......: <br/>
+  <table id='tab1' bgcolor='blue' style="display: none">
+  <tr><td>ID</td><td>Name</td><td>Email</td></tr>
+  </table>
+  <BR/>
 
 
-<!-- ADD STUDENT BUTTON -->
-<input placeholder="Enter name to add" type='text' id='addName'>
-<input placeholder="Enter email to add" type='text' id='addEmail'>
-<button onClick="addStudent()">Add</button>
+  <!-- ADD STUDENT BUTTON -->
+  <input placeholder="Enter name to add" type='text' id='addName'>
+  <input placeholder="Enter email to add" type='text' id='addEmail'>
+  <button onClick="addStudent()">Add</button>
 
-<!-- DELETE BUTTON  -->
-<input placeholder="Enter ID for deletion" type='int' id='deleteId'>
-<button onClick="deleteStudent()">Delete</button>
+  <!-- DELETE BUTTON  -->
+  <input placeholder="Enter ID for deletion" type='int' id='deleteId'>
+  <button onClick="deleteStudent()">Delete</button>
 
-<!-- UPDATE BUTTON  -->
-<input placeholder="Enter ID for update" type='int' id='updateId'>
-<input placeholder="Enter name for update" type='text' id='updateName'>
-<input placeholder="Enter email for update" type='text' id='updateEmail'>
-<button onClick="updateStudent()">Update</button>
+  <!-- UPDATE BUTTON  -->
+  <input placeholder="Enter ID for update" type='int' id='updateId'>
+  <input placeholder="Enter name for update" type='text' id='updateName'>
+  <input placeholder="Enter email for update" type='text' id='updateEmail'>
+  <button onClick="updateStudent()">Update</button>
 
-<script>
-  let baseURL='https://akdbs.southindia.cloudapp.azure.com:8080/';
-  let id=document.querySelector('input');
+  <script>
+    let baseURL='https://akdbs.southindia.cloudapp.azure.com:8080/';
+    let id=document.querySelector('input');
 
-// ADD STUDENT
-  let addStudent=()=>{
-    fetch(baseURL+'add?name='+document.querySelector('#addName').value+'&email='+document.querySelector('addEmail').value).then(resp=>{alert('Student added')});
-    // document.querySelector('#addName').value="";
-    // document.querySelector('#addEmail').value="";}
-}
+  // ADD STUDENT
+    let addStudent=()=>{
+      fetch(baseURL+'add?name='+document.querySelector('#addName').value+'&email='+document.querySelector('addEmail').value).then(resp=>{alert('Student added')});
+      // document.querySelector('#addName').value="";
+      // document.querySelector('#addEmail').value="";}
+  }
 
-// DELETE STUDENT
-  let deleteStudent=()=>{
-  fetch(baseURL+'delete?id='+document.querySelector('#deleteId').value).then((resp)=>{alert("Student Deleted")});}
+  // DELETE STUDENT
+    let deleteStudent=()=>{
+    fetch(baseURL+'delete?id='+document.querySelector('#deleteId').value).then((resp)=>{alert("Student Deleted")});}
 
-// UPDATE STUDENT
-  let updateStudent=()=>{
-    fetch(baseURL+'update?id='+document.querySelector('#updateId').value+'&name='+document.querySelector('#updateName').value+'&email='+document.querySelector('#updateEmail').value).then(resp=>{alert('Student Updated')});}
-</script>
-
-
-
-
-
-
+  // UPDATE STUDENT
+    let updateStudent=()=>{
+      fetch(baseURL+'update?id='+document.querySelector('#updateId').value+'&name='+document.querySelector('#updateName').value+'&email='+document.querySelector('#updateEmail').value).then(resp=>{alert('Student Updated')});}
+  </script>
 
 </body>
+
 </html>
