@@ -24,9 +24,9 @@ tab1.setAttribute("style","\"\"");
 }
 );
 }
-
 </script>
 </head>
+
 <body>
 <button onClick="doIt()">Press me</button>
 This is where the results turn up.......: <br/>
@@ -34,6 +34,14 @@ This is where the results turn up.......: <br/>
 <tr><td>ID</td><td>Name</td><td>Email</td></tr>
 </table>
 <BR/>
+
+<!-- ADD STUDENT  -->
+<script>
+  let baseURL='https://akdbs.southindia.cloudapp.azure.com:8080/';
+  let id=document.querySelector('input');
+  let addStudent=()=>{
+    fetch(baseURL+'add?id='+document.querySelector('#addId').value).then(resp=>{alert('Student added')});document.querySelector('#addId').value="";}
+</script>
 
 
 <!-- DELETE BUTTON  -->
