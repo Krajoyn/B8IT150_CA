@@ -39,6 +39,7 @@ def update():
   name = request.args.get('name')
   email = request.args.get('email')
   id = request.args.get('id')
+  print('id')
   cur = mysql.connection.cursor() #create a connection to the SQL instance
   s='''UPDATE students SET studentName='{}', email='{}' WHERE studentID='{}';'''
   cur.execute(s, (name, email, id))
