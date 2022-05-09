@@ -38,8 +38,8 @@ This is where the results turn up.......: <br/>
 
 
 <!-- ADD STUDENT BUTTON -->
-<input placeholder="Enter name to add" type='int' id='addName'>
-<input placeholder="Enter email to add" type='int' id='addEmail'>
+<input placeholder="Enter name to add" type='text' id='addName'>
+<input placeholder="Enter email to add" type='text' id='addEmail'>
 <button onClick="addStudent()">Add</button>
 
 <!-- DELETE BUTTON  -->
@@ -58,7 +58,7 @@ This is where the results turn up.......: <br/>
 
 // ADD STUDENT
   let addStudent=()=>{
-    fetch(baseURL+'add?name='+document.querySelector('#addName').value+'&email='+document.querySelector('addEmail').value).then(resp=>{alert('Student added')});
+    fetch(baseURL+'add?id='+document.querySelector('#addName').value+'&email='+document.querySelector('addEmail').value).then(resp=>{alert('Student added')});
     document.querySelector('#addName').value="";
     document.querySelector('#addEmail').value="";}
 
@@ -68,7 +68,7 @@ This is where the results turn up.......: <br/>
 
 // UPDATE STUDENT
   let updateStudent=()=>{
-    fetch(baseURL+'updateStudent?id='+document.querySelector('#updateId').value+'&name='+document.querySelector('#updateName').value+'&email='+document.querySelector('#updateEmail').value).then(resp=>{alert('Student Updated')});}
+    fetch(baseURL+'update?id='+document.querySelector('#updateId').value+'&name='+document.querySelector('#updateName').value+'&email='+document.querySelector('#updateEmail').value).then(resp=>{alert('Student Updated')});}
 </script>
 
 
