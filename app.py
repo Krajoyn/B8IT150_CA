@@ -27,7 +27,7 @@ def add():
 
 @app.route("/delete") #Delete Student
 def delete():
- id = request.args.get('deleteId')
+ id = request.args.get('id')
  cur = mysql.connection.cursor() #create a connection to the SQL instance
  s='''DELETE s.* FROM students s WHERE studentID='{}';'''.format(id)
  cur.execute(s)
