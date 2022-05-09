@@ -36,12 +36,20 @@ This is where the results turn up.......: <br/>
 </table>
 <BR/>
 
+
+<!-- ADD STUDENT BUTTON -->
+<input placeholder="Enter name to add" type='int' id='addName'>
+<input placeholder="Enter email to add" type='int' id='addEmail'>
+<button onClick="addStudent()">Add</button>
+
 <!-- ADD STUDENT  -->
 <script>
   let baseURL='https://akdbs.southindia.cloudapp.azure.com:8080/';
   let id=document.querySelector('input');
   let addStudent=()=>{
-    fetch(baseURL+'add?id='+document.querySelector('#addId').value).then(resp=>{alert('Student added')});document.querySelector('#addId').value="";}
+    fetch(baseURL+'add?name='+document.querySelector('#addName').value+'&email='+document.querySelector('addEmail').value).then(resp=>{alert('Student added')});
+    document.querySelector('#addName').value="";
+    document.querySelector('#addEmail').value="";}
 </script>
 
 
@@ -69,8 +77,6 @@ let deleteStudent=()=>{
 <!-- <button onClick="updateStudent()">Update</button> -->
 
 <button onClick="fetch(baseURL+'update?id='+document.querySelector('#updateId').value+'&name='+document.querySelector('#updateName').value+'&email='+document.querySelector('#updateEmail').value).then(resp=>{alert('Student Updated')});">Update</button>
-
-
 
 
 <!-- UPDATE STUDENT  -->
