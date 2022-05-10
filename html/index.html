@@ -31,11 +31,15 @@
 <body>
 
   <button onClick="doIt()">Press me</button>
-  This is where the results turn up.......: <br/>
+  Student database 
+  <br/>
+
   <table id='tab1' bgcolor='blue' style="display: none">
   <tr><td>ID</td><td>Name</td><td>Email</td></tr>
   </table>
+  
   <BR/>
+
 
 
   <!-- ADD STUDENT BUTTON -->
@@ -59,10 +63,7 @@
 
   // ADD STUDENT
     let addStudent=()=>{
-      fetch(baseURL+'add?name='+document.querySelector('#addName').value+'&email='+document.querySelector('#addEmail').value).then(resp=>{alert('Student added')});
-      // document.querySelector('#addName').value="";
-      // document.querySelector('#addEmail').value="";}
-  }
+      fetch(baseURL+'add?name='+document.querySelector('#addName').value+'&email='+document.querySelector('#addEmail').value).then(resp=>{alert('Student added')});}
 
   // DELETE STUDENT
     let deleteStudent=()=>{
