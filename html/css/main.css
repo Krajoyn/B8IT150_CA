@@ -1,6 +1,6 @@
-table tab1{
+tab1, th, td{
   border: 1px solid #dddddd;
-  text-align: left;
+  text-align: center;
   padding: 8px;
 }
 
