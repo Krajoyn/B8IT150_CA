@@ -4,16 +4,22 @@
 
 
 #studentTable {
+  background-color: #04AA6D;
+  color: white;
   border-collapse: collapse;
   margin: 40px 0;
   border-radius: 5px 5px 0 0;
+  border:  1px solid;
   font-size:  0.9em;
   min-width: 450px;
   overflow: hidden;
+  text-align: center;
+
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
 #studentTable caption {
+  font-size: 22;
   background: blueviolet;
   color: black;
   text-align: center;
@@ -21,3 +27,8 @@
   padding: 10px 10px;
 }
 
+#studentTable tr:nth-child(even) {
+  background-color: #f2f2f2;}
+
+#studentTable tr:hover {
+  background-color: coral;}
