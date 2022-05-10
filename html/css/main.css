@@ -1,4 +1,4 @@
-/*.student-table {
+.tab1 {
   border-collapse: collapse;
   margin: 40px 0;
   font-size:  0.9em;
@@ -8,8 +8,7 @@
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
-.student-table th,
-.student-table td {
+.tab1 th,
+.tab1 td {
   padding: 15px 15px;
 }
-*/
