@@ -1,0 +1,17 @@
+<<<<<<< HEAD
+=======
+.student-table {
+  border-collapse: collapse;
+  margin: 40px 0;
+  font-size:  0.9em;
+  min-width: 400px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.content-table th,
+.content-table td {
+  padding: 12px 15px;
+}
+>>>>>>> a73c7a4d1b7e379d636b16cefb50463c9cbc8aaa
