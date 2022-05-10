@@ -3,7 +3,7 @@
 }
 
 
-#student-table {
+#studentTable {
   color: yellow;
   border-collapse: collapse;
   margin: 40px 0;
@@ -14,8 +14,8 @@
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
-#student-table th,
-#student-table td {
+#studentTable th,
+#studentTable td {
   padding: 15px 15px;
 }
 

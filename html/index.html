@@ -7,8 +7,8 @@
   <title>Test API Client</title>
   <script>
   let doIt=()=>{
-  let tab=document.getElementById("student-table");
-  let rows=student-table.getElementsByTagName('tr');
+  let tab=document.getElementById("studentTable");
+  let rows=studentTable.getElementsByTagName('tr');
   fetch('https://akdbs.southindia.cloudapp.azure.com:8080/')
   .then(response => response.json())
   .then(data=>{data.Results.forEach(
@@ -18,10 +18,10 @@
   divs[0].innerHTML=x['ID'];
   divs[1].innerHTML=x['Name'];
   divs[2].innerHTML=x['Email'];
-  student-table.appendChild(newRow);
+  studentTable.appendChild(newRow);
   }
   );
-  student-table.setAttribute("style","\"\"");
+  studentTable.setAttribute("style","\"\"");
   }
   );
   }
@@ -33,7 +33,7 @@
   <button onClick="doIt()">Press me</button>
   <br/>
 
-  <table id='student-table' style="display: none">
+  <table id='studentTable' style="display: none">
     <caption>Student Database</caption>
     <tr>
       <td>ID</td>
