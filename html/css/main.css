@@ -28,6 +28,13 @@
   padding: 15px 15px;
 }
 
+#studentTable thead tr{
+  background-color: lightblue;
+  color: black;
+  text-align: center;
+  font-weight: bold;
+}
+
 /*Taken from https://www.w3schools.com/Css/css_table_style.asp*/
 #studentTable tr:nth-child(even) {
   background-color: #f2f2f2;}
