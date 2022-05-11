@@ -31,6 +31,11 @@
   height: 50px;
 }
 
+#studentTable td:first-child {
+  font-weight: bold;
+  color: yellow;
+}
+
 /*Taken from https://www.w3schools.com/Css/css_table_style.asp*/
 #studentTable tr:nth-child(even) {
   background-color: #f2f2f2;}
