@@ -33,7 +33,7 @@
 
 
 /*Taken from https://www.w3schools.com/Css/css_table_style.asp*/
-#studentTable th:nth-child(even) {
+#studentTable tr:nth-child(even) {
   background-color: #f2f2f2;}
 
 /*Taken from https://www.w3schools.com/Css/css_table_style.asp*/
