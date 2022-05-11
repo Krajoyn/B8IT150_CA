@@ -4,7 +4,7 @@
 
 
 #studentTable caption {
-  font-size: 50;
+  font-size: 100;
   background: purple;
   color: white;
   text-align: center;
@@ -28,12 +28,11 @@
 }
 
 #studentTable thead tr {
-  height: 100px;
-  padding: 5px;
-  font-weight: bold;
+  height: 70px;
+  padding: 10px;
+/*  font-weight: bold;*/
   background-color: #00008B;
   color: white;
-  font-size: 400;
 }
 
 #studentTable tbody tr {
