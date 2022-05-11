@@ -46,10 +46,10 @@
   font-weight: bold;
 }
 
-#studentTable thead tr {
+#studentTable thead th {
   padding: 10px;
-  color: yellow;
-  background-color: orange;
+  color: white;
+  background-color: #00008B;
 }
 
 
