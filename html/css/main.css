@@ -28,6 +28,7 @@
 #studentTable thead {
   height: 70px;
   background-color: #00008B;
+  color: red;
 }
 
 #studentTable thead th {
