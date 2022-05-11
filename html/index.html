@@ -14,7 +14,7 @@
   .then(data=>{data.Results.forEach(
   x=>{
   let newRow=rows[0].cloneNode(true);
-  let divs=newRow.getElementsByTagName('th');
+  let divs=newRow.getElementsByTagName('td');
   divs[0].innerHTML=x['ID'];
   divs[1].innerHTML=x['Name'];
   divs[2].innerHTML=x['Email'];
@@ -35,11 +35,15 @@
 
   <table id='studentTable' style="display: none">
     <caption>Student Database</caption>
-    <caption>Student Database</caption>
-    <tr>
+<!--     <tr>
       <th>ID</th>
       <th>Name</th>
       <th>Email</th>
+    </tr> -->
+    <tr>
+      <td>ID</td>
+      <td>Name</td>
+      <td>Email</td>
     </tr>
   </table>
 
