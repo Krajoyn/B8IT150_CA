@@ -61,5 +61,16 @@
   cursor: pointer;
 }
 
+.button-group button {
+  background-color: #f2f2f2;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.btn-group button:hover {
+  background-color: #00008B;
+}
+
 /*REFERENCES
 Used this template as a starting point: https://codepen.io/dcode-software/pen/dLVwOY*/
