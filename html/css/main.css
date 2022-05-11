@@ -34,10 +34,15 @@
   background-color: #00008B;
 }
 
+#studentTable th,
 #studentTable td {
-  height: 40px;
   padding: 8px;
 }
+
+#studentTable tbody tr {
+  border-bottom: 1px solid black;
+}
+
 
 /*Taken from https://www.w3schools.com/Css/css_table_style.asp*/
 #studentTable tr:nth-child(even) {
