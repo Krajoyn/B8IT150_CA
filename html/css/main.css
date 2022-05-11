@@ -15,6 +15,7 @@
 #studentTable {
   background-color: #1E90FF;
   border-collapse: collapse;
+  color: yellow;
   margin-left: auto;
   margin-right: auto;
   border-radius: 10px 10px 0 0;
@@ -22,8 +23,6 @@
   min-width: 700px;
   overflow: hidden;
   text-align: center;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-  font: bold;
 }
 
 #studentTable thead {
@@ -34,10 +33,6 @@
 #studentTable thead th {
   padding: 8px;
   color: white;
-}
-
-#studentTable thead tr {
-  color: red;
 }
 
 
