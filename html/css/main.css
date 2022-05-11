@@ -28,12 +28,18 @@
 }
 
 #studentTable th {
-  height: 50px;
+  height: 60px;
+  padding: 8px;
+  font-weight: bold;
 }
 
+#studentTable td {
+  height: 40px;
+  padding: 8px;
+}
 
 /*Taken from https://www.w3schools.com/Css/css_table_style.asp*/
-#studentTable tr:nth-child(even) {
+#studentTable tr:nth-child(odd) {
   background-color: #f2f2f2;}
 
 /*Taken from https://www.w3schools.com/Css/css_table_style.asp*/
