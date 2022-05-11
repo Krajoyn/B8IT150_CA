@@ -28,10 +28,10 @@
 }
 
 #studentTable th {
-  height: 60px;
+  height: 200px;
   padding: 8px;
   font-weight: bold;
-  background-color: #00008B;}
+  background-color: #00008B;
 }
 
 #studentTable td {
