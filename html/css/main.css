@@ -19,17 +19,17 @@
 }
 
 #studentTable caption {
-  font-size: 44;
+  font-size: 50;
   background: purple;
   color: white;
   text-align: center;
   font-weight: bold;
-  padding: 15px 15px;
+  padding: 20px 20px;
 }
 
 #studentTable thead tr {
-  height: 200px;
-  padding: 8px;
+  height: 40px;
+  padding: 5px;
   font-weight: bold;
   background-color: #00008B;
 }
@@ -37,10 +37,7 @@
 #studentTable th,
 #studentTable td {
   padding: 8px;
-}
-
-#studentTable tbody tr {
-  border-bottom: 1px solid black;
+  font-weight: 100;
 }
 
 
