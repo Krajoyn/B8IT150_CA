@@ -33,17 +33,8 @@
 #studentTable thead th {
   padding: 8px;
   color: white;
+  font-size: 100;
 }
-
-/*#studentTable tr {
-  padding: 102px;
-  height: 150;
-  color: black;
-}
-*/
-
-
-
 
 
 /*Taken from https://www.w3schools.com/Css/css_table_style.asp*/
