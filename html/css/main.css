@@ -26,7 +26,15 @@
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
-#studentTable thead tr {
+/*#studentTable thead tr {
+  height: 70px;
+  padding: 10px;
+  font-weight: bold;
+  background-color: #00008B;
+  color: white;
+}*/
+
+#studentTable thead {
   height: 70px;
   padding: 10px;
   font-weight: bold;
