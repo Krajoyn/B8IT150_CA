@@ -46,7 +46,7 @@
   font-weight: bold;
 }
 
-#studentTable tbody tr {
+#studentTable thead tr {
   padding: 10px;
   color: yellow;
   background-color: orange;
