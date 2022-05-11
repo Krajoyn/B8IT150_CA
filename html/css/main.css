@@ -45,6 +45,7 @@
   background-color: #00008B;
   color: white;}
 
+/*Referenced https://www.w3schools.com/csS/css3_buttons.asp*/
 .dbButton {
   border: none;
   background-color: #00008B;
@@ -62,6 +63,7 @@
 }
 
 .button-group button {
+  display: block;
   background-color: #f2f2f2;
   color: white;
   padding: 10px 20px;
