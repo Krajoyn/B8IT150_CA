@@ -5,7 +5,7 @@
 
 #studentTable {
 
-  background-color: green;
+  background-color: #1E90FF;
   color: black;
   border-collapse: collapse;
   margin-left: auto;
@@ -21,7 +21,7 @@
 
 #studentTable caption {
   font-size: 44;
-  background: blue;
+  background: purple;
   color: white;
   text-align: center;
   font-weight: bold;
