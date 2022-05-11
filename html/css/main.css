@@ -36,6 +36,11 @@
   font-size: 40;
 }
 
+#studentTable tbody tr {
+  padding: 100px;
+  color: yellow;
+}
+
 #studentTable th {
   padding: 8px;
   font-weight: bold;
