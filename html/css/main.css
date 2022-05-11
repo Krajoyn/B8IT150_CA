@@ -37,9 +37,13 @@
 #studentTable thead {
   height: 70px;
   padding: 10px;
-  font-weight: bold;
   background-color: #00008B;
+}
+
+#studentTable th {
+  padding: 8px;
   color: white;
+  font-weight: bold;
 }
 
 #studentTable tbody tr {
@@ -48,10 +52,6 @@
   background-color: orange;
 }
 
-#studentTable th {
-  padding: 8px;
-  color: red;
-}
 
 
 
