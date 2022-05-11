@@ -33,12 +33,12 @@
   font-weight: bold;
   background-color: #00008B;
   color: white;
+  font-size: 40;
 }
 
 #studentTable th,
 #studentTable td {
   padding: 8px;
-  font-weight: 100;
 }
 
 
