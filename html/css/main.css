@@ -33,7 +33,10 @@
 #studentTable thead th {
   padding: 8px;
   color: white;
-  font-size: 100;
+}
+
+#studentTable thead tr {
+  color: red;
 }
 
 
