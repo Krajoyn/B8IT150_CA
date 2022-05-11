@@ -14,7 +14,7 @@
 
 #studentTable {
   background-color: #1E90FF;
-  color: black;
+/*  color: black;*/
   border-collapse: collapse;
   margin-left: auto;
   margin-right: auto;
@@ -39,16 +39,6 @@
   color: yellow;
 }
 
-#studentTable th {
-  padding: 8px;
-}
-
-#studentTable td {
-  padding: 8px;
-  color: red;
-}
-
-
 
 
 /*Taken from https://www.w3schools.com/Css/css_table_style.asp*/
@@ -59,3 +49,8 @@
 #studentTable tr:hover {
   background-color: #00008B;
   color: white;}
+
+
+
+/*REFERENCES
+Used this template as a starting point: https://codepen.io/dcode-software/pen/dLVwOY*/
