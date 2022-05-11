@@ -27,14 +27,10 @@
   padding: 15px 15px;
 }
 
-#studentTable th {
+#studentTable td {
   height: 50px;
 }
 
-#studentTable td:first-line {
-  font-weight: bold;
-  color: yellow;
-}
 
 /*Taken from https://www.w3schools.com/Css/css_table_style.asp*/
 #studentTable tr:nth-child(even) {
