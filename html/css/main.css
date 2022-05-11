@@ -11,8 +11,8 @@
   margin-right: auto;
   border-radius: 10px 10px 0 0;
   border:  5px solid;
-  font-size:  0.9em;
-  min-width: 450px;
+/*  font-size:  0.9em;*/
+  min-width: 700px;
   overflow: hidden;
   text-align: center;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
@@ -36,10 +36,16 @@
   font-size: 40;
 }
 
-#studentTable th,
+#studentTable th {
+  padding: 8px;
+  font-weight: bold;
+}
+
 #studentTable td {
   padding: 8px;
 }
+
+
 
 
 /*Taken from https://www.w3schools.com/Css/css_table_style.asp*/
