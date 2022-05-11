@@ -26,13 +26,11 @@
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
-/*#studentTable thead tr {
-  height: 70px;
+#studentTable thead th {
   padding: 10px;
-  font-weight: bold;
-  background-color: #00008B;
   color: white;
-}*/
+  background-color: #00008B;
+}
 
 #studentTable thead {
   height: 70px;
@@ -40,17 +38,12 @@
   background-color: #00008B;
 }
 
-#studentTable th {
+/*#studentTable th {
   padding: 8px;
   color: black;
   font-weight: bold;
 }
-
-#studentTable thead th {
-  padding: 10px;
-  color: white;
-  background-color: #00008B;
-}
+*/
 
 
 
