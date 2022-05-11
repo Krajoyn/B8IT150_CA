@@ -31,6 +31,7 @@
   height: 60px;
   padding: 8px;
   font-weight: bold;
+  background-color: #00008B;}
 }
 
 #studentTable td {
@@ -39,7 +40,7 @@
 }
 
 /*Taken from https://www.w3schools.com/Css/css_table_style.asp*/
-#studentTable tr:nth-child(odd) {
+#studentTable tr:nth-child(even) {
   background-color: #f2f2f2;}
 
 /*Taken from https://www.w3schools.com/Css/css_table_style.asp*/
