@@ -28,23 +28,21 @@
 
 #studentTable thead {
   height: 70px;
-/*  padding: 10px;*/
   background-color: #00008B;
 }
 
 #studentTable thead th {
   padding: 10px;
   color: white;
-/*  background-color: #00008B;*/
 }
 
-
-/*#studentTable th {
+#studentTable tr {
   padding: 8px;
   color: black;
   font-weight: bold;
+  color: yellow;
 }
-*/
+
 
 
 
