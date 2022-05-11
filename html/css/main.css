@@ -23,7 +23,6 @@
   overflow: hidden;
   text-align: center;
   font-weight: lighter;
-  font-size: 20;
 }
 
 #studentTable thead {
@@ -46,7 +45,18 @@
   background-color: #00008B;
   color: white;}
 
-
+.dbButton {
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
 
 /*REFERENCES
 Used this template as a starting point: https://codepen.io/dcode-software/pen/dLVwOY*/
