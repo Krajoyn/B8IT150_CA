@@ -26,17 +26,18 @@
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
-#studentTable thead th {
-  padding: 10px;
-  color: white;
+#studentTable thead {
+  height: 70px;
+/*  padding: 10px;*/
   background-color: #00008B;
 }
 
-#studentTable thead {
-  height: 700px;
+#studentTable thead th {
   padding: 10px;
-  background-color: #00008B;
+  color: white;
+/*  background-color: #00008B;*/
 }
+
 
 /*#studentTable th {
   padding: 8px;
