@@ -62,6 +62,16 @@
   cursor: pointer;
 }
 
+.dbButton:hover {
+  background-color: #f2f2f2;
+}
+
+.dbButton:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
 .button-group button {
   display: block;
   background-color: #f2f2f2;
