@@ -88,12 +88,10 @@
   float: left;
 }
 
-::placeholder {
-  color: purple;
-}
-
 .button-group ::placeholder {
-  color: red
+  color: red  width:16.666666666%;
+  margin-left:25%;
+  margin-right:25%;
 }
 
 
