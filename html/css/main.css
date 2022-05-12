@@ -88,22 +88,13 @@
   float: left;
 }
 
-::.placeholder {
-  color: red;
-}
-
-.placeholder {
-  color: yellow;
-}
-
-#placeholder {
-  color: blue;
-}
-
 ::placeholder {
   color: purple;
 }
 
+.button-group ::placeholder {
+  color: red
+}
 
 
 /*REFERENCES
