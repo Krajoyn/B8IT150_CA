@@ -53,22 +53,22 @@
   <button class="dbButton" onClick="doIt()">Student Database</button>
   <br/>
 
-<div class="button-group">
-  <!-- ADD STUDENT BUTTON -->
-  <input placeholder="Enter name to add" type='text' id='addName'>
-  <input placeholder="Enter email to add" type='text' id='addEmail'>
-  <button onClick="addStudent()">Add</button>
+  <div class="button-group">
+    <!-- ADD STUDENT BUTTON -->
+    <input placeholder="Enter name to add" type='text' id='addName'>
+    <input placeholder="Enter email to add" type='text' id='addEmail'>
+    <button onClick="addStudent()">Add</button>
 
-  <!-- DELETE BUTTON  -->
-  <input placeholder="Enter ID for deletion" type='int' id='deleteId'>
-  <button onClick="deleteStudent()">Delete</button>
+    <!-- DELETE BUTTON  -->
+    <input placeholder="Enter ID for deletion" type='int' id='deleteId'>
+    <button onClick="deleteStudent()">Delete</button>
 
-  <!-- UPDATE BUTTON  -->
-  <input placeholder="Enter ID for update" type='int' id='updateId'>
-  <input placeholder="Enter name for update" type='text' id='updateName'>
-  <input placeholder="Enter email for update" type='text' id='updateEmail'>
-  <button onClick="updateStudent()">Update</button>
-</div>
+    <!-- UPDATE BUTTON  -->
+    <input placeholder="Enter ID for update" type='int' id='updateId'>
+    <input placeholder="Enter name for update" type='text' id='updateName'>
+    <input placeholder="Enter email for update" type='text' id='updateEmail'>
+    <button onClick="updateStudent()">Update</button>
+  </div>
 
   <script>
     let baseURL='https://akdbs.southindia.cloudapp.azure.com:8080/';

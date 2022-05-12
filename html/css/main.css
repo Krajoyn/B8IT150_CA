@@ -84,5 +84,10 @@
   background-color: #00008B;
 }
 
+.button-group input {
+  color: red;
+}
+
+
 /*REFERENCES
 Used this template as a starting point: https://codepen.io/dcode-software/pen/dLVwOY*/
