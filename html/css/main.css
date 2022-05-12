@@ -89,9 +89,9 @@
 }
 
 .button-group input {
-  width: 10%;
+  width: 50%;
   color: red;
-  float: center;
+  float: right;
   display: block;
 }
 
