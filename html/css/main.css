@@ -2,6 +2,10 @@
   font-family: calibre; /* Change your font family */
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
 
 #studentTable caption {
   font-size: 100;
