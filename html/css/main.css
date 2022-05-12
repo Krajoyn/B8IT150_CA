@@ -10,6 +10,18 @@ img {
   height: auto;
 }
 
+.header{
+  padding: 60px;
+  text-align: center;
+  background: lightblue;
+  color: white;
+  font-size: 30px;
+}
+
+.content {
+  padding:20px;
+}
+
 #studentTable caption {
   font-size: 100;
   background: purple;
