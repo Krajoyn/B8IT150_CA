@@ -23,6 +23,8 @@ div.graduation-hat-img {
 }
 
 .content .img2 {
+  max-height: 40px;
+  max-width: 40px;
   float: left;
   display: inline;
 }
