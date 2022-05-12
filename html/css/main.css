@@ -85,9 +85,13 @@
   float: left;
 }
 
-.button-group ::placeholder {
+.button-group input {
   color: red;
-  padding: 100px 100px;
+  float: left;
+}
+
+.button-group ::placeholder {
+  color: black;
 }
 
 
