@@ -87,7 +87,8 @@
 
 .button-group input {
   color: red;
-  float: left;
+  float: right;
+  display: block;
 }
 
 .button-group ::placeholder {
