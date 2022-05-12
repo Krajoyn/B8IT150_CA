@@ -88,11 +88,19 @@
   float: left;
 }
 
-.button-group .placeholder {
+::.placeholder {
   color: red;
-  padding: 100px 100px;
-  border: 10px solid red;
 }
+
+.placeholder {
+  color: yellow;
+}
+
+#placeholder {
+  color: blue;
+}
+
+
 
 /*REFERENCES
 Used this template as a starting point: https://codepen.io/dcode-software/pen/dLVwOY*/
