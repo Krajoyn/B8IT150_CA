@@ -2,11 +2,11 @@
   font-family: calibre; /* Change your font family */
 }
 
-div.graduation-hat-img {
+graduation-hat-img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 100%;
+  width: 50%;
   height: auto;
 }
 
