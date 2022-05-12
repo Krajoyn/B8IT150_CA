@@ -72,7 +72,7 @@
   transform: translateY(4px);
 }
 
-.button-group .button{
+.button-group {
   background-color: #4CAF50; /* Green */
   border: 1px solid green;
   color: white;
