@@ -73,6 +73,9 @@
 }
 
 .button-group {
+  width:50%;
+  margin-left:25%;
+  margin-right:25%;
   background-color: #4CAF50; /* Green */
   border: 1px solid green;
   color: white;
@@ -84,11 +87,6 @@
   cursor: pointer;
   float: left;
 }
-
-/*.btn-group button:hover {
-  background-color: #00008B;
-}
-*/
 
 
 /*REFERENCES
