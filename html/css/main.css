@@ -89,7 +89,8 @@
 }
 
 .button-group ::placeholder {
-  color: red  width:16.666666666%;
+  color: red;
+  width:16.666666666%;
   margin-left:25%;
   margin-right:25%;
 }
