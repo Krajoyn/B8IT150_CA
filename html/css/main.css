@@ -91,7 +91,7 @@
 .button-group input {
   width: 10%;
   color: red;
-  float: left;
+  float: center;
   display: block;
 }
 
