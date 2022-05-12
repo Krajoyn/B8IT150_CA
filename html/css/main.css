@@ -72,10 +72,10 @@
   transform: translateY(4px);
 }
 
-.button-group button{
+.button-group button {
   width:16.666666666%;
-/*  margin-left:25%;
-  margin-right:25%;*/
+  margin-left:25%;
+/*  margin-right:25%;*/
   background-color: #1E90FF;
   border: 1px solid black;
   color: white;
@@ -88,6 +88,9 @@
   float: left;
 }
 
+.button-group placeholder {
+  color: red;
+}
 
 /*REFERENCES
 Used this template as a starting point: https://codepen.io/dcode-software/pen/dLVwOY*/
