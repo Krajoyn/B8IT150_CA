@@ -88,17 +88,15 @@
   float: left;
 }
 
-.button-group input {
-  width: 50%;
+.button-group input,
+.button-group ::placeholder {
+  width: 25%;
+  margin-right: 25%;
   color: red;
   float: right;
   display: block;
 }
 
-.button-group ::placeholder {
-  color: black;
-  display: block;
-}
 
 
 /*REFERENCES
