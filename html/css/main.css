@@ -73,12 +73,14 @@
 }
 
 .button-group button {
-  width: 33.3%;
+  float: left;
+  cursor: pointer;
+  border: 1px solid black;
 /*  display: block;
   background-color: #f2f2f2;
   color: white;
   padding: 10px 20px;
-  cursor: pointer;*/
+*/
 }
 
 .btn-group button:hover {
