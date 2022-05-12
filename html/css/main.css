@@ -88,8 +88,10 @@
   float: left;
 }
 
-.button-group placeholder {
+.button-group .placeholder {
   color: red;
+  padding: 100px 100px;
+  border: 10px solid red;
 }
 
 /*REFERENCES
