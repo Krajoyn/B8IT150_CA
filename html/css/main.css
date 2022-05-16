@@ -104,7 +104,7 @@
 .button-group input,
 .button-group ::placeholder {
   width: 10%;
-  margin-right: 50%;
+  margin-right: 40%;
   color: black;
   float: right;
   display: block;
@@ -113,4 +113,9 @@
 
 
 /*REFERENCES
-Used this template as a starting point: https://codepen.io/dcode-software/pen/dLVwOY*/
+  
+  https://codepen.io/dcode-software/pen/dLVwOY
+  
+  https://www.w3schools.com/
+
+*/
