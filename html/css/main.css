@@ -12,12 +12,11 @@
 }
 
 .test {
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
   display: block;
-  border: 5px solid #555;
-  text-align: center;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .header {
