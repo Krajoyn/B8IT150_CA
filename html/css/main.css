@@ -2,6 +2,7 @@
   font-family: calibre; /* Change your font family */
 }
 
+
 .header {
   padding: 60px;
   text-align: center;
@@ -54,7 +55,8 @@
 /*Taken from https://www.w3schools.com/Css/css_table_style.asp*/
 #studentTable tr:hover {
   background-color: #00008B;
-  color: white;}
+  color: white;
+}
 
 /*Referenced https://www.w3schools.com/csS/css3_buttons.asp*/
 .dbButton {
