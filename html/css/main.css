@@ -10,6 +10,10 @@
   font-size: 30px;
 }
 
+.header .img {
+  border: black;
+}
+
 .content {
   padding:20px;
 }
