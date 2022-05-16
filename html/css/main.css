@@ -21,10 +21,10 @@
   padding:20px;
 }
 
-.content .img2 {
-  max-height: 40px;
-  max-width: 40px;
-  float: left;
+.img2 {
+  max-height: 100px;
+  max-width: 100px;
+  display: block;
 }
 
 #studentTable caption {
