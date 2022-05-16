@@ -101,8 +101,8 @@
   float: left;
 }
 
-.button-group input,
-/*.button-group ::placeholder*/ {
+/*.button-group input,*/
+.button-group ::placeholder {
   width: 10%;
   margin-right: 60%;
   color: black;
