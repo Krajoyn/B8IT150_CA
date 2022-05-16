@@ -2,7 +2,7 @@
   font-family: calibre; /* Change your font family */
 }
 
-.titleImage {
+/*.titleImage {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -17,7 +17,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
+}*/
 
 .header {
   padding: 60px;
