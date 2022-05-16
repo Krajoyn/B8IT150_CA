@@ -109,6 +109,14 @@
   color: red;
 }
 
+::placeholder-group {
+  width: 25%;
+  color: black;
+  float: right;
+  display: block;
+  color: red;
+}
+
 
 
 
