@@ -2,7 +2,7 @@
   font-family: calibre; /* Change your font family */
 }
 
-.titleImage {
+.titleImage .img {
   display: block;
   margin-left: auto;
   margin-right: auto;
