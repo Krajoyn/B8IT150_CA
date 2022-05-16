@@ -11,6 +11,15 @@
   height: auto;
 }
 
+.img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  color: yellow;
+  height: auto;
+}
+
 .header {
   padding: 60px;
   text-align: center;
