@@ -101,10 +101,9 @@
   float: left;
 }
 
-.placeholder-group ::placeholder,
-.placeholder-group .input {
+.placeholder-group input {
   width: 10%;
-  color: black;
+  color: red;
   float: right;
   display: block;
   text-align: center;
