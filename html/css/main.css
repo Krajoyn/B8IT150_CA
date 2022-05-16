@@ -10,8 +10,12 @@
   font-size: 30px;
 }
 
-.header .img {
+.header .maing-img {
   border: black;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 
 .content {
