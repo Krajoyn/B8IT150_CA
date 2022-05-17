@@ -45,7 +45,7 @@ def update():
   dob = request.args.get('dob')
   course = request.args.get('course')
   cur = mysql.connection.cursor() #create a connection to the SQL instance
-  s='''UPDATE students SET studentName='{}', email='{}', dob='{}', course='{}' WHERE studentID='{}';'''.format(name,email,dob,course)
+  s='''UPDATE students SET studentName='{}', email='{}', dob='{}', course='{}' WHERE studentID='{}';'''.format(id,name,email,dob,course)
   cur.execute(s)
   mysql.connection.commit()
   return '{"Result":"Success"}'
