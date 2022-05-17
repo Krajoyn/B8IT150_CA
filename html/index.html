@@ -18,6 +18,8 @@
   divs[0].innerHTML=x['ID'];
   divs[1].innerHTML=x['Name'];
   divs[2].innerHTML=x['Email'];
+  divs[3].innerHTML=x['DOB'];
+  divs[4].innerHTML=x['Course'];
   studentTable.appendChild(newRow);
   }
   );
@@ -55,6 +57,8 @@
         <th>ID</th>
         <th>Name</th>
         <th>Email</th>
+        <th>DOB</th>
+        <th>Course</th>
       </tr>
     </thead>
 <!--     <tbody>
@@ -80,9 +84,11 @@
   </div>
 
   <div class="placeholder-group">
+    <input placeholder="Enter student ID" type='int' id='Id'>
     <input placeholder="Enter student name" type='text' id='Name'>
     <input placeholder="Enter student email" type='text' id='Email'>
-    <input placeholder="Enter student ID" type='int' id='Id'>
+    <input placeholder="Enter student DOB" type='text' id='DOB'>
+    <input placeholder="Enter student Course" type='text' id='Course'>
   </div>
 
   <script>
@@ -91,7 +97,7 @@
 
   // ADD STUDENT
     let addStudent=()=>{
-      fetch(baseURL+'add?name='+document.querySelector('#Name').value+'&email='+document.querySelector('#Email').value).then(resp=>{alert('Student added')});}
+      fetch(baseURL+'add?name='+document.querySelector('#Name').value+'&email='+document.querySelector('#Email').value+'&dob='+document.querySelector('#DOB').value+'&course='+document.querySelector('#Course').value).then(resp=>{alert('Student added')});}
 
   // DELETE STUDENT
     let deleteStudent=()=>{
@@ -99,7 +105,7 @@
 
   // UPDATE STUDENT
     let updateStudent=()=>{
-      fetch(baseURL+'update?id='+document.querySelector('#Id').value+'&name='+document.querySelector('#Name').value+'&email='+document.querySelector('#Email').value).then(resp=>{alert('Student Updated')});}
+      fetch(baseURL+'update?id='+document.querySelector('#Id').value+'&name='+document.querySelector('#Name').value+'&email='+document.querySelector('#Email').value+'&dob='+document.querySelector('#DOB').value+'&course='+document.querySelector('#Course').value).then(resp=>{alert('Student Updated')});}
   </script>
 
 </body>
