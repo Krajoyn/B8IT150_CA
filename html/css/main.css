@@ -85,6 +85,10 @@
   transform: translateY(4px);
 }
 
+.buttons {
+  width: 100%;
+}
+
 .button-group button {
   margin-right: 25%;
   margin-left: 25%;
