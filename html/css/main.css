@@ -102,8 +102,9 @@
   padding: 5px;
 }*/
 
-.button-group {
+.button-group button {
   width: 33%;
+  color: black;
 }
 
 .button-group:hover {
@@ -114,10 +115,6 @@
  color: black;
  text-align: center;
  float: left;
-}
-
-::placeholders {
-  color: blue;
 }
 
 
