@@ -105,20 +105,21 @@
   float: left;
   padding: 5px;
 }
+
 .button-group .button:hover {
   background-color: #00008B;
 }
 
 .placeholder-group {
-  margin-right: 40%;
-  margin-left: 40%;
+  margin-right: 25%;
+  margin-left: 25%;
 }
 
 .placeholder-group input {
   color: black;
   padding: 15px 32px;
   text-align: center;
-  width: 25%;
+  width: 50%;
   display: block;
 }
 
