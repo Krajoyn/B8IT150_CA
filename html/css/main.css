@@ -110,8 +110,8 @@
   background-color: #00008B;
 }
 
-.button-group .button:active {
-  background-color: #1E90FF;
+.button-group button:active {
+  background-color: #00008B;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
