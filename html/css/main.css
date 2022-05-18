@@ -59,7 +59,7 @@
 }
 
 /*Referenced https://www.w3schools.com/csS/css3_buttons.asp*/
-.dbButton {
+/*.dbButton {
   border: none;
   background-color: #00008B;
   color: white;
@@ -83,9 +83,9 @@
   background-color: #1E90FF;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
-}
+}*/
 
-/*.button-group {
+.button-group {
   margin-right: 25%;
   margin-left: 25%;
   width: 25%;
@@ -100,11 +100,6 @@
   cursor: pointer;
   float: left;
   padding: 5px;
-}*/
-
-/*.button-group button {
-  width: 33%;
-  color: black;
 }
 
 .button-group:hover {
@@ -118,7 +113,7 @@
 }
 
 
-*/
+
 
 /*REFERENCES
   
