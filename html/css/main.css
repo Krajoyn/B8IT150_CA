@@ -103,23 +103,16 @@
   font-size: 16px;
   cursor: pointer;
   float: left;
+  padding: 5px;
 }
 
 .placeholder-group input,
 .placeholder-group .placeholder {
   width: 10%;
   color: red;
-  float: right;
+  float: left;
   display: block;
   text-align: center;
-}
-
-::placeholder-group {
-  width: 25%;
-  color: black;
-  float: right;
-  display: block;
-  color: red;
 }
 
 
