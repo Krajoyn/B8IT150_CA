@@ -88,8 +88,8 @@
 
 .button-group button {
 /*  margin-right: 25%;
-  margin-left: 25%;
-  width: 25%;*/
+  margin-left: 25%;*/
+  width: 25%;
   background-color: #1E90FF;
   border: 1px solid black;
   color: white;
@@ -103,7 +103,7 @@
   padding: 5px;
 }
 
-.button-group:hover {
+.button-group .button:hover {
   background-color: #00008B;
 }
 
