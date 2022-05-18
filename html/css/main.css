@@ -89,6 +89,9 @@
 .button-group {
   margin-right: 25%;
   margin-left: 25%;
+}
+
+.button-group button {
   width: 10%;
   background-color: #1E90FF;
   border: 1px solid black;
@@ -102,7 +105,6 @@
   float: left;
   padding: 5px;
 }
-
 .button-group .button:hover {
   background-color: #00008B;
 }
