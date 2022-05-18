@@ -106,9 +106,10 @@
   background-color: #00008B;
 }
 
-.placeholder-group {
+.placeholder-group input {
  color: black;
  text-align: center;
+ float: left;
 }
 
 ::placeholders {
