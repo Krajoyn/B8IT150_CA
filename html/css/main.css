@@ -85,10 +85,6 @@
   transform: translateY(4px);
 }
 
-.buttons {
-  width: 100%;
-}
-
 .button-group {
   margin-right: 25%;
   margin-left: 25%;
@@ -106,8 +102,12 @@
   padding: 5px;
 }
 
+.button-group:hover {
+  background-color: #00008B;
+}
+
 .placeholder-group {
- color: blue;
+ color: black;
  text-align: center;
 }
 
