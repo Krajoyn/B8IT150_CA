@@ -89,7 +89,7 @@
   width: 100%;
 }
 
-.button-group /*button */{
+.button-group {
   margin-right: 25%;
   margin-left: 25%;
   width: 25%;
@@ -106,15 +106,10 @@
   padding: 5px;
 }
 
-/*.placeholder-group input,
-.placeholder-group .placeholder {
-  width: 10%;
-  color: red;
-  float: left;
-  display: block;
-  text-align: center;
+.placeholder-group {
+ color: blue;
 }
-*/
+
 
 
 
