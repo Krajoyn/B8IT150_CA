@@ -111,14 +111,13 @@
 }
 
 .placeholder-group {
-  margin-right: 35%;
-  margin-left: 35%;
+  margin-right: 40%;
+  margin-left: 40%;
 }
 
 .placeholder-group input {
   color: black;
   text-align: center;
-  width: 50%;
   display: block;
 }
 
