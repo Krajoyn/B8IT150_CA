@@ -86,10 +86,9 @@
   transform: translateY(4px);
 }
 
-.button-group button {
-/*  margin-right: 10%;
-  margin-left: 10%;*/
-  margin-left: 25%;
+.button-group {
+  margin-right: 10%;
+  margin-left: 10%;
   width: 10%;
   background-color: #1E90FF;
   border: 1px solid black;
