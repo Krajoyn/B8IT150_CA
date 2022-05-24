@@ -74,8 +74,6 @@
     <button onClick="addStudent()">Add</button>
     <button onClick="deleteStudent()">Delete</button>
     <button onClick="updateStudent()">Update</button>
-    <button onclick="document.querySelector('Id').value=('')+document.querySelector('Name').value = ''">Clear input field</button>
-
   </div>
 
   <br/>
@@ -87,10 +85,8 @@
     <input placeholder="Student email (aa@bb.cc format)" type='email' id='Email' pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" onfocus="this.value=''">
     <input placeholder="Student DOB (DD/MM/YYYY)" type='date' id='DOB' onfocus="this.value=''">
     <input placeholder="Student Course" type='text' id='Course' onfocus="this.value=''">
-    <input type="reset" value="Reset">
   </div>
 
-  <button onclick="document.getElementById('#Id').value=(''")+document.querySelector('#Name').value>Clear input field</button>
 
   <script>
     let baseURL='https://akdbs.southindia.cloudapp.azure.com:8080/';
