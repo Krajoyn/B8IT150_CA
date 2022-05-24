@@ -74,6 +74,8 @@
     <button onClick="addStudent()">Add</button>
     <button onClick="deleteStudent()">Delete</button>
     <button onClick="updateStudent()">Update</button>
+    <button onclick="document.getElementById('myInput').value = ''">Clear input field</button>
+
   </div>
 
   <br/>
@@ -88,7 +90,7 @@
     <input type="reset" value="Reset">
   </div>
 
-  <button onclick="document.getElementById('myInput').value = ''">Clear input field</button>
+  <button onclick="document.getElementById('#Id').value=(''")+document.querySelector('#Name').value>Clear input field</button>
 
   <script>
     let baseURL='https://akdbs.southindia.cloudapp.azure.com:8080/';
@@ -105,6 +107,7 @@
   // UPDATE STUDENT
     let updateStudent=()=>{
       fetch(baseURL+'update?id='+document.querySelector('#Id').value+'&name='+document.querySelector('#Name').value+'&email='+document.querySelector('#Email').value+'&dob='+document.querySelector('#DOB').value+'&course='+document.querySelector('#Course').value).then(resp=>{alert('Student Updated')});}
+
   </script>
 
 </body>
