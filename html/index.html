@@ -93,7 +93,7 @@
 
   // ADD STUDENT
     let addStudent=()=>{
-      fetch(baseURL+'add?name='+document.querySelector('#Name').value+'&email='+document.querySelector('#Email').pattern+'&dob='+document.querySelector('#DOB').value+'&course='+document.querySelector('#Course').value).then(resp=>{alert('Student added')});}
+      fetch(baseURL+'add?name='+document.querySelector('#Name').value+'&email='+document.querySelector('#Email').value.pattern+'&dob='+document.querySelector('#DOB').value+'&course='+document.querySelector('#Course').value).then(resp=>{alert('Student added')});}
 
   // DELETE STUDENT
     let deleteStudent=()=>{
@@ -101,7 +101,7 @@
 
   // UPDATE STUDENT
     let updateStudent=()=>{
-      fetch(baseURL+'update?id='+document.querySelector('#Id').value+'&name='+document.querySelector('#Name').value+'&email='+document.querySelector('#Email').pattern+'&dob='+document.querySelector('#DOB').value+'&course='+document.querySelector('#Course').value).then(resp=>{alert('Student Updated')});}
+      fetch(baseURL+'update?id='+document.querySelector('#Id').value+'&name='+document.querySelector('#Name').value+'&email='+document.querySelector('#Email').value.pattern+'&dob='+document.querySelector('#DOB').value+'&course='+document.querySelector('#Course').value).then(resp=>{alert('Student Updated')});}
   </script>
 
 </body>
