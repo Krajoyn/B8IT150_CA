@@ -66,12 +66,11 @@
 
   <BR/>
 
+  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search students by name" title="Type in a name">
+
   <button class="dbButton" onClick="doIt()">Display Student Database</button>
   <br/>
   <br/>
-
-  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search students by name" title="Type in a name">
-
 
 
   <div class="button-group">
@@ -110,7 +109,7 @@
     let updateStudent=()=>{
       fetch(baseURL+'update?id='+document.querySelector('#Id').value+'&name='+document.querySelector('#Name').value+'&email='+document.querySelector('#Email').value+'&dob='+document.querySelector('#DOB').value+'&course='+document.querySelector('#Course').value).then(resp=>{alert('Student Updated')});}
 
-
+  //Taken from https://www.w3schools.com/howto/howto_js_filter_table.asp
   // SEARCH FUNCTION
   function myFunction() {
   var input, filter, table, tr, td, i, txtValue;
