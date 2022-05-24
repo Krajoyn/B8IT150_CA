@@ -130,6 +130,13 @@
   display: block;
 }
 
+.placeholder-group caption {
+  color: white;
+  background-color: #00008B;
+  text-align: center;
+  display: block;
+}
+
 
 
 
