@@ -144,29 +144,16 @@
 }
 
 
-/*#myInput {
-  background-position: 10px 10px;
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 12px;
   background-repeat: no-repeat;
-  margin-left:25%;
-  margin-right:25%;
-  width: 50%;
+  width: 100%;
   font-size: 16px;
   padding: 12px 20px 12px 40px;
   border: 1px solid #ddd;
   margin-bottom: 12px;
 }
-
-.label {
-  background-position: 10px 10px;
-  background-repeat: no-repeat;
-  margin-left:25%;
-  margin-right:25%;
-  font-size: 16px;
-  padding: 12px 20px 12px 40px;
-  border: 1px solid #ddd;
-  margin-bottom: 12px;
-}
-*/
 
 
 /*REFERENCES
