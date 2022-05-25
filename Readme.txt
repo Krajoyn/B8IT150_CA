@@ -12,7 +12,7 @@ Functional system requirements
 - Delete student
 - Update student info
 - Search students
-- Present and display
+- Present and display student info
 
 
 Non-Functional system requirements
