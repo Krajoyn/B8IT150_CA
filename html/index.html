@@ -59,6 +59,9 @@
 
 
   <table id='studentTable' style="display: none">
+    <label>Search student by name: 
+      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter student name" title="Type in a name">
+    </label>
     <caption>Student Database</caption>
     <thead>
       <tr>
@@ -92,9 +95,6 @@
 
   <div class="placeholder-group">
     <h2>Student Form</h2>
-    <label>Search student by name: 
-      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter student name" title="Type in a name">
-    </label>
     <input placeholder="Student ID" type='int' id='Id' onfocus="this.value=''">
     <input placeholder="Student name" type='text' id='Name' onfocus="this.value=''">
     <input placeholder="Student email (aa@bb.cc format)" type='email' id='Email' pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" onfocus="this.value=''">
