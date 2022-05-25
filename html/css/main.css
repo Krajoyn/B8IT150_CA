@@ -137,6 +137,12 @@
   display: block;
 }
 
+.searchBar {
+  margin-right: 25%;
+  margin-left: 25%;
+}
+
+
 /*#myInput {
   background-position: 10px 10px;
   background-repeat: no-repeat;
