@@ -135,6 +135,7 @@
   background-color: #00008B;
   text-align: center;
   display: block;
+  width: 100%;
 }
 
 .searchBar #myInput {
