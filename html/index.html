@@ -128,7 +128,7 @@
   table = document.getElementById("studentTable");
   tr = table.getElementsByTagName("tr");
   for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("tr")[1];
+    td = tr[i].getElementsByTagName("th")[1];
     if (td) {
       txtValue = td.textContent || td.innerText;
       if (txtValue.toUpperCase().indexOf(filter) > -1) {
