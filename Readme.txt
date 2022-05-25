@@ -22,5 +22,6 @@ Non-Functional system requirements
 - Ease of maintaining
 - Responsiveness
 - Minimalistic design
+- Clearing previously filled data (on click)
 
 
