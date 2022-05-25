@@ -20,6 +20,8 @@
   divs[2].innerHTML=x['Email'];
   divs[3].innerHTML=x['DOB'];
   divs[4].innerHTML=x['Course'];
+  divs[5].innerHTML=x['Phone'];
+  divs[6].innerHTML=x['Address'];
   studentTable.appendChild(newRow);
   }
   );
@@ -44,18 +46,7 @@
     <p>
       Welcome to the staff portal where you can manage your student database. Here you can add, delete and update student records.
     </p>
-
-    <p>
-      TESTETSTETETSTTESTSTETSTSETESTSETESTTTESTSETESTSETTSESE
-    </p>
-
   </div>
-
-<!--   <div class="searchBar">
-    <label>Search student by name: 
-      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter student name" title="Type in a name">
-    </label>
-  </div> -->
 
 
   <table id='studentTable' style="display: none">
@@ -67,6 +58,8 @@
         <th>Email</th>
         <th>DOB</th>
         <th>Course</th>
+        <th>Phone</th>
+        <th>Address</th>
       </tr>
     </thead>
   </table>
@@ -100,6 +93,8 @@
     <input placeholder="Student email (aa@bb.cc format)" type='email' id='Email' pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" onfocus="this.value=''">
     <input placeholder="Student DOB (DD/MM/YYYY)" type='date' id='DOB' onfocus="this.value=''">
     <input placeholder="Student Course" type='text' id='Course' onfocus="this.value=''">
+    <input placeholder="Student Phone" type='int' id='Phone' onfocus="this.value=''">
+    <input placeholder="Student Address" type='text' id='Address' onfocus="this.value=''">
   </div>
 
 
@@ -109,7 +104,7 @@
 
   // ADD STUDENT
     let addStudent=()=>{
-      fetch(baseURL+'add?name='+document.querySelector('#Name').value+'&email='+document.querySelector('#Email').value+'&dob='+document.querySelector('#DOB').value+'&course='+document.querySelector('#Course').value).then(resp=>{alert('Student added')});}
+      fetch(baseURL+'add?name='+document.querySelector('#Name').value+'&email='+document.querySelector('#Email').value+'&dob='+document.querySelector('#DOB').value+'&course='+document.querySelector('#Course').value+'&phone='+document.querySelector('Phone').value+'&address='+document.querySelector('#Address').value).then(resp=>{alert('Student added')});}
 
   // DELETE STUDENT
     let deleteStudent=()=>{
@@ -117,7 +112,7 @@
 
   // UPDATE STUDENT
     let updateStudent=()=>{
-      fetch(baseURL+'update?id='+document.querySelector('#Id').value+'&name='+document.querySelector('#Name').value+'&email='+document.querySelector('#Email').value+'&dob='+document.querySelector('#DOB').value+'&course='+document.querySelector('#Course').value).then(resp=>{alert('Student Updated')});}
+      fetch(baseURL+'update?id='+document.querySelector('#Id').value+'&name='+document.querySelector('#Name').value+'&email='+document.querySelector('#Email').value+'&dob='+document.querySelector('#DOB').value+'&course='+document.querySelector('#Course').value+'&phone='+document.querySelector('Phone').value+'&address='+document.querySelector('#Address').value).then(resp=>{alert('Student Updated')});}
 
   //Taken from https://www.w3schools.com/howto/howto_js_filter_table.asp
   // SEARCH FUNCTION

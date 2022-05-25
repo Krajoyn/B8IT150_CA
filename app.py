@@ -20,8 +20,10 @@ def add():
   email = request.args.get('email')
   dob = request.args.get('dob')
   course = request.args.get('course')
+  phone = request.args.get('phone')
+  address = request.args.get('address')
   cur = mysql.connection.cursor() #create a connection to the SQL instance
-  s='''INSERT INTO students(studentName, email, dob, course) VALUES('{}','{}','{}','{}');'''.format(name,email,dob,course)
+  s='''INSERT INTO students(studentName, email, dob, course, phone, address) VALUES('{}','{}','{}','{}','{}','{}');'''.format(name,email,dob,course,phone,address)
   cur.execute(s)
   mysql.connection.commit()
 
@@ -43,8 +45,10 @@ def update():
   email = request.args.get('email')
   dob = request.args.get('dob')
   course = request.args.get('course')
+  phone = request.args.get('phone')
+  address = request.args.get('address')
   cur = mysql.connection.cursor() #create a connection to the SQL instance
-  s='''UPDATE students s SET studentName='{}', email='{}', dob='{}', course='{}' WHERE studentID='{}';'''.format(name,email,dob,course,id)
+  s='''UPDATE students s SET studentName='{}', email='{}', dob='{}', course='{}', phone='{}', address='{}' WHERE studentID='{}';'''.format(name,email,dob,course,phone, address,id)
   cur.execute(s)
   mysql.connection.commit()
   return '{"Result":"Success"}'
@@ -64,6 +68,8 @@ def hello(): # Name of the method
     Result['ID']=row[2]
     Result['DOB']=row[3]
     Result['Course']=row[4]
+    Result['Phone']=row[4]
+    Result['Address']=row[4]
     Results.append(Result)
   response={'Results':Results, 'count':len(Results)}
   ret=app.response_class(
