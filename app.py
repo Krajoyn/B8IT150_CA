@@ -48,7 +48,7 @@ def update():
   phone = request.args.get('phone')
   address = request.args.get('address')
   cur = mysql.connection.cursor() #create a connection to the SQL instance
-  s='''UPDATE students s SET studentName='{}', email='{}', dob='{}', course='{}', phone='{}', address='{}' WHERE studentID='{}';'''.format(name,email,dob,course,phone, address,id)
+  s='''UPDATE students s SET studentName='{}', email='{}', dob='{}', course='{}', phone='{}', address='{}' WHERE studentID='{}';'''.format(name,email,dob,course,phone,address,id)
   cur.execute(s)
   mysql.connection.commit()
   return '{"Result":"Success"}'
@@ -68,8 +68,8 @@ def hello(): # Name of the method
     Result['ID']=row[2]
     Result['DOB']=row[3]
     Result['Course']=row[4]
-    Result['Phone']=row[4]
-    Result['Address']=row[4]
+    Result['Phone']=row[5]
+    Result['Address']=row[6]
     Results.append(Result)
   response={'Results':Results, 'count':len(Results)}
   ret=app.response_class(
