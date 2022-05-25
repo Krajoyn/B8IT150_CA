@@ -10,12 +10,16 @@ Functional system requirements
 - Add student 
 - Delete student
 - Update student info
-- Allow staff to search for students in the database
-- Presenting results in a table
+- Search students
+- Present and display
 
 
 Non-Functional system requirements
 - Reliability
 - Performance
+- Ease of use
+- Ease of maintaining
 - Responsiveness
+- Minimalistic design
+
 
