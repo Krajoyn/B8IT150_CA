@@ -1,5 +1,6 @@
 Github link: https://github.com/Krajoyn/B8IT150_CA/
 DataBase link: https://akdbs.southindia.cloudapp.azure.com/
+Public IP address: 20.219.97.223
 
 
 
