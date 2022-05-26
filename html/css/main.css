@@ -63,10 +63,7 @@
 .dbButtons {
   margin-left:25%;
   margin-right:25%;
-}
-
-.dbButtons button {
-  border: none;
+  border: black;
   background-color: #00008B;
   color: white;
   padding: 16px 32px;
@@ -74,6 +71,10 @@
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+}
+
+.dbButtons button {
+
   width:25%;
   transition-duration: 0.4s;
   cursor: pointer;
