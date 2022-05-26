@@ -60,6 +60,11 @@
 }
 
 /*Referenced https://www.w3schools.com/csS/css3_buttons.asp*/
+.dbButtons {
+  margin-left:25%;
+  margin-right:25%;
+}
+
 .dbButtons button {
   border: none;
   background-color: #00008B;
@@ -69,9 +74,7 @@
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  width:50%;
-  margin-left:25%;
-  margin-right:25%;
+  width:25%;
   transition-duration: 0.4s;
   cursor: pointer;
 }
