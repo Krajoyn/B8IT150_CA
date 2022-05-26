@@ -63,6 +63,9 @@
 .dbButtons {
   margin-left:25%;
   margin-right:25%;
+}
+
+.dbButtons button {
   border: black;
   background-color: #00008B;
   color: white;
@@ -71,21 +74,17 @@
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-}
-
-.dbButtons button {
-
-  width:25%;
+  width:50%;
   transition-duration: 0.4s;
   cursor: pointer;
 }
 
 
-.dbButton:hover {
+.dbButtons button:hover {
   background-color: #1E90FF;
 }
 
-.dbButton:active {
+.dbButtons button:active {
   background-color: #1E90FF;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
