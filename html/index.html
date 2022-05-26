@@ -97,6 +97,7 @@
     <input placeholder="Student Address" type='text' id='Address' onfocus="this.value=''">
   </div>
 
+  <button id="refresh-btn">Refresh Table</button>
 
   <script>
     let baseURL='https://akdbs.southindia.cloudapp.azure.com:8080/';
@@ -135,9 +136,22 @@
   }
 }
 
-  setTimeout(function(){
-     $( "#studentTable" ).load( "index.html #studentTable" );
-  }, 2000); //refresh every 2 seconds
+$(document).ready(function() {
+
+   function RefreshTable() {
+       $( "#studentTable" ).load( "your-current-page.html #studentTable" );
+   }
+
+   $("#refresh-btn").on("click", RefreshTable);
+
+   // OR CAN THIS WAY
+   //
+   // $("#refresh-btn").on("click", function() {
+   //    $( "#mytable" ).load( "your-current-page.html #mytable" );
+   // });
+
+
+});
 
   </script>
 
