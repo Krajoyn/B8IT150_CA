@@ -32,7 +32,8 @@
   </script>
 </head>
 
-<body>
+<!-- <body> -->
+<body onLoad="timeRefresh(2000);">
 
   <div class="header">
     <img src="../images/university.jpg" alt="university building picture">
@@ -137,6 +138,10 @@
     }       
   }
 }
+
+    function timeRefresh(time) {
+        setTimeout("location.reload(true);", time);
+      }
 
   </script>
 
