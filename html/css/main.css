@@ -60,7 +60,7 @@
 }
 
 /*Referenced https://www.w3schools.com/csS/css3_buttons.asp*/
-.dbButtons {
+.dbButtons button {
   border: none;
   background-color: #00008B;
   color: white;
