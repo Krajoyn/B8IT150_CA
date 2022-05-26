@@ -60,7 +60,7 @@
 }
 
 /*Referenced https://www.w3schools.com/csS/css3_buttons.asp*/
-.dbButton {
+.dbButtons {
   border: none;
   background-color: #00008B;
   color: white;
@@ -138,11 +138,6 @@
   width: 100%;
 }
 
-/*.searchBar #myInput {
-  margin-right: 25%;
-  margin-left: 25%;
-  width: 50%;
-}*/
 
 
 
