@@ -67,7 +67,8 @@
 
 .dbButtons button {
   width: 50%;
-  background-color: #00008B;
+/*  background-color: #00008B;*/
+  background-color: #1E90FF;
   border: 1px solid black;
   color: white;
   padding: 16px 32px;
@@ -83,11 +84,11 @@
 
 
 .dbButtons button:hover {
-  background-color: #1E90FF;
+  background-color: #00008B;
 }
 
 .dbButtons button:active {
-  background-color: #1E90FF;
+  background-color: #00008B;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
