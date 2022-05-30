@@ -30,9 +30,6 @@
   border-collapse: collapse;
   margin-left: auto;
   margin-right: auto;
-  border-radius: 10px 10px 10px 10px;
-  border: 5px solid;
-  border-color: red;
   min-width: 650px;
   overflow: hidden;
   text-align: center;
@@ -47,6 +44,9 @@
 #studentTable thead th {
   padding: 8px;
   color: white;
+  border-radius: 10px 10px 10px 10px;
+  border: 5px solid;
+  border-color: #00008B;
 }
 
 
