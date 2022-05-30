@@ -160,9 +160,10 @@
 }
 
 footer {
+  display: block;
   text-align: center;
-  padding: 3px;
-  background-color: DarkSalmon;
+  padding: 10px;
+  background-color: lightblue;
   color: white;
 }
 
