@@ -136,6 +136,11 @@
   display: block;
 }
 
+.placeholder-group label {
+  text-align: center;
+}
+
+
 .placeholder-group h2 {
   color: white;
   background-color: #00008B;
