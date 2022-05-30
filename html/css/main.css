@@ -136,10 +136,6 @@
   display: block;
 }
 
-.placeholder-group label {
-  text-align: center;
-}
-
 
 .placeholder-group h2 {
   color: white;
@@ -151,6 +147,17 @@
   margin-right: 5%;
   padding: 10px;
 }
+
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: red;
+   color: white;
+   text-align: center;
+}
+
 
 
 
