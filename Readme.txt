@@ -16,6 +16,7 @@ Functional system and user requirements
 - Present and display student info
 
 Non-Functional system and user requirements
+- Secure and Certified connection (SSL/TLS/HTTPS)
 - Reliability
 - Performance
 - Ease of use
