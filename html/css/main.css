@@ -34,9 +34,7 @@
   overflow: hidden;
   text-align: center;
   font-weight: lighter;
-  border-radius: 10px 10px 10px 10px;
-  border: 5px solid;
-  border-color: #00008B;
+
 }
 
 #studentTable thead {
@@ -48,6 +46,9 @@
 #studentTable thead th {
   padding: 8px;
   color: white;
+/*  border-radius: 10px 10px 10px 10px;*/
+  border: 5px solid;
+  border-color: red;
 
 }
 
