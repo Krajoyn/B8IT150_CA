@@ -30,9 +30,9 @@
   border-collapse: collapse;
   margin-left: auto;
   margin-right: auto;
-  border-radius: 10px 10px 0 0;
-  border:  5px solid;
-  min-width: 500px;
+/*  border-radius: 10px 10px 0 0;*/
+/*  border:  5px solid;*/
+  min-width: 650px;
   overflow: hidden;
   text-align: center;
   font-weight: lighter;
