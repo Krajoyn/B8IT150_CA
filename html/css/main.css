@@ -39,14 +39,15 @@
 #studentTable thead {
   height: 50px;
   background-color: #00008B;
+  border-radius: 10px 10px 10px 10px;
+  border: 5px solid;
+  border-color: red;
 }
 
 #studentTable thead th {
   padding: 8px;
   color: white;
-  border-radius: 10px 10px 10px 10px;
-  border: 5px solid;
-  border-color: #00008B;
+
 }
 
 
