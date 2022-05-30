@@ -95,11 +95,6 @@
     <label>Search student by name: 
       <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter student name to search" title="Type in a name">
     </label>
-    <div class="button-group">
-    <button onClick="addStudent()">Add</button>
-    <button onClick="deleteStudent()">Delete</button>
-    <button onClick="updateStudent()">Update</button>
-    </div>
     <h2>Student Form</h2>
     <input placeholder="Student ID" type='int' id='Id' onfocus="this.value=''">
     <input placeholder="Student Name" type='text' id='Name' onfocus="this.value=''">
@@ -110,6 +105,15 @@
     <input placeholder="Student Address" type='text' id='Address' onfocus="this.value=''">
   </div>
 
+
+    <div class="button-group">
+      <button onClick="addStudent()">Add</button>
+      <button onClick="deleteStudent()">Delete</button>
+      <button onClick="updateStudent()">Update</button>
+    </div>
+
+
+    
   <script>
     let baseURL='https://akdbs.southindia.cloudapp.azure.com:8080/';
     let id=document.querySelector('input');
