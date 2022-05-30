@@ -94,12 +94,12 @@
 }
 
 .button-group {
-  margin-right: 5%;
-  margin-left: 5%;
+  margin-right: 10%;
+  margin-left: 10%;
 }
 
 .button-group button {
-  width: 30%;
+  width: 33.33%;
   background-color: #1E90FF;
   border: 1px solid black;
   color: white;
@@ -110,6 +110,7 @@
   font-size: 16px;
   cursor: pointer;
   float: left;
+  padding: 5px;
 }
 
 .button-group button:hover {
