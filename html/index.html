@@ -76,6 +76,9 @@
       <!--   Taken from 
     https://www.w3docs.com/snippets/javascript/how-to-reload-a-page-using-javascript.html -->
     <button onClick="window.location.reload(true)">Refresh</button>
+        <label>Search student by name: 
+      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter student name to search" title="Type in a name">
+    </label>
   </div>
 
 
@@ -91,9 +94,9 @@
 
 
   <div class="placeholder-group">
-    <label>Search student by name: 
+<!--     <label>Search student by name: 
       <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter student name to search" title="Type in a name">
-    </label>
+    </label> -->
     <h2>Student Form</h2>
     <input placeholder="Student ID" type='int' id='Id' onfocus="this.value=''">
     <input placeholder="Student Name" type='text' id='Name' onfocus="this.value=''">
