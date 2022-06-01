@@ -4,17 +4,20 @@ from flask_mysqldb import MySQL
 from flask_cors import CORS
 import json
 mysql = MySQL()
-app = Flask(__name__)
+app = Flask(
+  __name__)
 CORS(app)
 # My SQL Instance configurations
-# Change the HOST IP and Password to match your instance configurations
 app.config['MYSQL_USER'] = 'web'
 app.config['MYSQL_PASSWORD'] = 'webPass'
 app.config['MYSQL_DB'] = 'student'
-app.config['MYSQL_HOST'] = 'localhost' #for now
+app.config['MYSQL_HOST'] = '20.219.97.223' 
 mysql.init_app(app)
 
-@app.route("/add") #Add Student
+
+# Add Student function - gets input from user and executes an SQL command
+# to add student to the database
+@app.route("/add") 
 def add():
   name = request.args.get('name')
   email = request.args.get('email')
@@ -29,7 +32,10 @@ def add():
 
   return '{"Result":"Success"}'
 
-@app.route("/delete") #Delete Student
+
+# Delete Student function - gets input from user and executes an SQL command
+# to delete the relevant entries from the database
+@app.route("/delete")
 def delete():
  id = request.args.get('id')
  cur = mysql.connection.cursor() #create a connection to the SQL instance
@@ -38,7 +44,10 @@ def delete():
  mysql.connection.commit()
  return '{"Result":"Success"}'
 
-@app.route("/update") #Update Student
+
+# Update Student function - gets input from user and executes an SQL command
+# to update relevant information fields of a student 
+@app.route("/update")
 def update():
   id = request.args.get('id')
   name = request.args.get('name')
@@ -53,9 +62,9 @@ def update():
   mysql.connection.commit()
   return '{"Result":"Success"}'
 
-
-@app.route("/") #Default - Show Data
-def hello(): # Name of the method
+#Default - Show Data
+@app.route("/") 
+def hello(): 
   cur = mysql.connection.cursor() #create a connection to the SQL instance
   cur.execute('''SELECT * FROM students''') # execute an SQL statment
   rv = cur.fetchall() #Retreive all rows returend by the SQL statment
@@ -63,7 +72,6 @@ def hello(): # Name of the method
   for row in rv: #Format the Output Results and add to return string
     Result={}
     Result['Name']=row[0]
-    # Result['Name']=row[0].replace('\n',' ')
     Result['Email']=row[1]
     Result['ID']=row[2]
     Result['DOB']=row[3]
