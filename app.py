@@ -11,7 +11,7 @@ CORS(app)
 app.config['MYSQL_USER'] = 'web'
 app.config['MYSQL_PASSWORD'] = 'webPass'
 app.config['MYSQL_DB'] = 'student'
-app.config['MYSQL_HOST'] = '20.219.97.223' 
+app.config['MYSQL_HOST'] = 'localhost' 
 mysql.init_app(app)
 
 
