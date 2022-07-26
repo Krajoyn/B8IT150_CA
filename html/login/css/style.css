@@ -1,0 +1,75 @@
+
+
+body{  
+font-family: calibre;
+margin: 0;  
+padding: 0;  
+background-color: blue;  
+}  
+
+.login{  
+background: #white; 
+width: 400px;  
+overflow: hidden;  
+margin: auto;  
+margin: 10 10 10 10;  
+padding: 100px;  
+border-radius: 20px ;            
+}  
+
+h2{  
+text-align: center;  
+color: #white;  
+padding: 15px;  
+} 
+
+label{  
+color: #purple;  
+font-size: 17px;  
+}  
+
+#Uname{  
+width: 300px;  
+height: 30px;  
+border: none;  
+border-radius: 3px;  
+padding-left: 8px;  
+}  
+
+#Pass{
+width: 300px;  
+height: 30px;  
+border: none;  
+border-radius: 3px;  
+padding-left: 8px;       
+}  
+
+#log{  
+width: 300px;  
+height: 30px;  
+border: none;  
+border-radius: 17px;  
+padding-left: 7px;  
+color: blue;  
+}
+
+span{  
+color: white;  
+font-size: 17px;  
+}  
+
+a{  
+float: right;  
+background-color: grey;  
+}  
+
+
+
+
+
+
+/*Code borrowed from
+https://www.c-sharpcorner.com/article/creating-a-simple-login-page-using-html-and-css/
+
+
+*/ 
