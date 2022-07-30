@@ -2,6 +2,9 @@
   font-family: calibre;
 }
 
+html, body{
+  height: 100%
+}
 
 .header {
   padding: 60px;
@@ -15,6 +18,22 @@
   padding:20px;
   text-align: center;
 }
+
+h1{
+  text-align: center;
+}
+
+h2{
+  text-align: center;
+}
+
+
+main{
+  float: left;
+  width: 100%;
+  height: auto;
+}
+
 
 #studentTable caption {
   font-size: 100;
