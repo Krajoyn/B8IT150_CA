@@ -15,6 +15,26 @@ app.config['MYSQL_HOST'] = 'localhost'
 mysql.init_app(app)
 
 
+
+# Login authentication functin
+@app.route('/form_login',methods=['POST','GET'])
+def login():
+    loginname=request.form['username']
+    loginpassword=request.form['password']
+    if loginname not in database:
+      return render_template('login.html',info='Invalid User')
+    else:
+        if database[loginname]!=loginpassword:
+            return render_template('login.html',info='Invalid Password')
+        else:
+           return render_template('home.html',name=loginname)
+
+
+
+
+
+
+
 # Add Student function - gets input from user and executes an SQL command
 # to add student to the database
 @app.route("/add") 
