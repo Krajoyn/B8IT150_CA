@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" type="text/css" href="../css/main.css">
+  <title>Student Database DBS CA B8IT150</title>
+  <script>
+  let doIt=()=>{
+  let tab=document.getElementById("studentTable");
+  let rows=studentTable.getElementsByTagName('tr');
+  fetch('https://akdbs.southindia.cloudapp.azure.com:8080/')
+  .then(response => response.json())
+  .then(data=>{data.Results.forEach(
+  x=>{
+  let newRow=rows[0].cloneNode(true);
+  let divs=newRow.getElementsByTagName('th');
+  divs[0].innerHTML=x['ID'];
+  divs[1].innerHTML=x['Name'];
+  divs[2].innerHTML=x['Email'];
+  divs[3].innerHTML=x['DOB'];
+  divs[4].innerHTML=x['Course'];
+  divs[5].innerHTML=x['Phone'];
+  divs[6].innerHTML=x['Address'];
+  studentTable.appendChild(newRow);
+  }
+  );
+  studentTable.setAttribute("style","\"\"");
+  }
+  );
+  }
+  </script>
+</head>
+
+<body>
+
+  <div class="header">
+    <img src="../images/university.jpg" alt="university building picture">
+
+    <h1>Welcome to the Staff Portal</h1>
+    <p>Here you can view and manage the student database</p>
+  </div>
+
+  <div class="content">
+    <h1></h1>
+    <p>
+      Welcome to the staff portal where you can manage your student database. Here you can add, delete and update student records.
+    </p>
+  </div>
+
+  <table id='studentTable'>
+    <caption>Student Database</caption>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>DOB</th>
+        <th>Course</th>
+        <th>Phone</th>
+        <th>Address</th>
+      </tr>
+    </thead>
+  </table>
+
+  <BR/>
+
+
+  <div class="dbButtons">
+    <button onClick="doIt()">Display Student Database</button>
+      <!--   Taken from 
+    https://www.w3docs.com/snippets/javascript/how-to-reload-a-page-using-javascript.html -->
+    <button onClick="window.location.reload(true)">Refresh</button>
+  </div>
+
+
+  <br/>
+  <br/>
+
+
+
+
+  <br/>
+  <br/>
+    
+
+
+  <div class="placeholder-group">
+    <label>Search student by name: 
+      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter student name to search" title="Type in a name">
+    </label>
+
+
+
+    <h2>Student Form</h2>
+    <div class="button-group">
+      <button onClick="addStudent()">Add</button>
+      <button onClick="deleteStudent()">Delete</button>
+      <button onClick="updateStudent()">Update</button>
+    </div>
+    <br/>
+    <br/>
+    <input placeholder="Student ID" type='int' id='Id' onfocus="this.value=''">
+    <input placeholder="Student Name" type='text' id='Name' onfocus="this.value=''">
+    <input placeholder="Student Email" type='email' id='Email' pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" onfocus="this.value=''">
+    <input placeholder="Student DOB (DD/MM/YYYY)" type='date' id='DOB' onfocus="this.value=''">
+    <input placeholder="Student Course" type='text' id='Course' onfocus="this.value=''">
+    <input placeholder="Student Phone" type='int' id='Phone' onfocus="this.value=''">
+    <input placeholder="Student Address" type='text' id='Address' onfocus="this.value=''">
+  </div>
+
+
+
+
+  <br/>
+  <br/>
+
+  <footer>© 2022 University Staff Portal</footer>
+
+
+  <script>
+    let baseURL='https://akdbs.southindia.cloudapp.azure.com:8080/';
+    let id=document.querySelector('input');
+
+  // ADD STUDENT
+    let addStudent=()=>{
+      fetch(baseURL+'add?name='+document.querySelector('#Name').value+'&email='+document.querySelector('#Email').value+'&dob='+document.querySelector('#DOB').value+'&course='+document.querySelector('#Course').value+'&phone='+document.querySelector('#Phone').value+'&address='+document.querySelector('#Address').value).then(resp=>{alert('Student added')});}
+
+  // DELETE STUDENT
+    let deleteStudent=()=>{
+    fetch(baseURL+'delete?id='+document.querySelector('#Id').value).then((resp)=>{alert("Student Deleted")});}
+
+  // UPDATE STUDENT
+    let updateStudent=()=>{
+      fetch(baseURL+'update?id='+document.querySelector('#Id').value+'&name='+document.querySelector('#Name').value+'&email='+document.querySelector('#Email').value+'&dob='+document.querySelector('#DOB').value+'&course='+document.querySelector('#Course').value+'&phone='+document.querySelector('#Phone').value+'&address='+document.querySelector('#Address').value).then(resp=>{alert('Student Updated')});}
+
+  //Taken from https://www.w3schools.com/howto/howto_js_filter_table.asp
+  // SEARCH FUNCTION
+  function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("studentTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("th")[1];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+
+  </script>
+
+
+
+
+
+</body>
+
+</html>
