@@ -15,6 +15,8 @@ app.config['MYSQL_HOST'] = 'localhost'
 mysql.init_app(app)
 
 
+# test sample login details
+database = {'admin':'admin'}
 
 # Login authentication functin
 @app.route('/form_login',methods=['POST','GET'])
