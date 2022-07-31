@@ -18,7 +18,7 @@ mysql.init_app(app)
 
 # test sample login details
 @app.route('/')
-def hello1():
+def hello_world():
     return render_template('login.html')
 database = {'admin':'admin'}
 
