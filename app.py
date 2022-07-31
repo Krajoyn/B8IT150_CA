@@ -18,7 +18,7 @@ mysql.init_app(app)
 
 
 # Default - Show Data
-@app.route("/") 
+@app.route() 
 def hello(): 
   return render_template('login.html')
 
