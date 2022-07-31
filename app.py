@@ -19,7 +19,7 @@ mysql.init_app(app)
 # test sample login details
 @app.route('/')
 def hello():
-    return render_template('loginindex.html')
+    return render_template('login.html')
 database = {'admin':'admin'}
 
 # Login authentication functin
@@ -28,10 +28,10 @@ def login():
     loginname=request.form['username']
     loginpassword=request.form['password']
     if loginname not in database:
-      return render_template('loginindex.html',info='Invalid User')
+      return render_template('login.html',info='Invalid User')
     else:
         if database[loginname]!=loginpassword:
-            return render_template('loginindex.html',info='Invalid Password')
+            return render_template('login.html',info='Invalid Password')
         else:
            return render_template('home.html',name=loginname)
 
