@@ -15,13 +15,15 @@ app.config['MYSQL_DB'] = 'student'
 app.config['MYSQL_HOST'] = 'localhost' 
 mysql.init_app(app)
 
+@app.route('/start')
+def start():
+    return render_template("login.html")
+  database = {'admin':'admin'}
 
 
 # Default - Show Data
 @app.route("/") 
 def hello(): 
-
-
   cur = mysql.connection.cursor() #create a connection to the SQL instance
   cur.execute('''SELECT * FROM students''') # execute an SQL statment
   rv = cur.fetchall() #Retreive all rows returend by the SQL statment
@@ -43,8 +45,7 @@ def hello():
     mimetype='application/json'
   )
   return ret #Return the data in a string format
-  return render_template('login.html')
-  database = {'admin':'admin'}
+
 
 if __name__ == "__main__":
   app.run(host='0.0.0.0',port='8080', ssl_context=('/home/aldasvmuser/cert.pem', '/home/aldasvmuser/privkey.pem')) #Run the flask app at port 8080
