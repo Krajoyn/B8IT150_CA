@@ -18,9 +18,9 @@ mysql.init_app(app)
 
 
 # Default - Show Data
-@app.route() 
+@app.route("/") 
 def hello(): 
-  return render_template('login.html')
+
 
   cur = mysql.connection.cursor() #create a connection to the SQL instance
   cur.execute('''SELECT * FROM students''') # execute an SQL statment
@@ -43,7 +43,7 @@ def hello():
     mimetype='application/json'
   )
   return ret #Return the data in a string format
-
+  return render_template('login.html')
   database = {'admin':'admin'}
 
 if __name__ == "__main__":
