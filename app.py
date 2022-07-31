@@ -1,11 +1,12 @@
 from flask import Flask
 from flask import request
+from flask import render_template
+import pickle
 from flask_mysqldb import MySQL
 from flask_cors import CORS
 import json
 mysql = MySQL()
-app = Flask(
-  __name__)
+app = Flask(__name__)
 CORS(app)
 # My SQL Instance configurations
 app.config['MYSQL_USER'] = 'web'
@@ -16,6 +17,9 @@ mysql.init_app(app)
 
 
 # test sample login details
+@app.route('/')
+def hello():
+    return render_template('loginindex.html')
 database = {'admin':'admin'}
 
 # Login authentication functin
@@ -24,10 +28,10 @@ def login():
     loginname=request.form['username']
     loginpassword=request.form['password']
     if loginname not in database:
-      return render_template('login.html',info='Invalid User')
+      return render_template('loginindex.html',info='Invalid User')
     else:
         if database[loginname]!=loginpassword:
-            return render_template('login.html',info='Invalid Password')
+            return render_template('loginindex.html',info='Invalid Password')
         else:
            return render_template('home.html',name=loginname)
 
