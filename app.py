@@ -22,7 +22,7 @@ def hello1():
     return render_template('login.html')
 database = {'admin':'admin'}
 
-# Login authentication functin
+# Login authentication function
 @app.route('/form_login',methods=['POST','GET'])
 def login():
     loginname=request.form['username']
