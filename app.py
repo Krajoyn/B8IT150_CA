@@ -18,7 +18,7 @@ mysql.init_app(app)
 @app.route('/start')
 def start():
     return render_template("login.html")
-  database = {'admin':'admin'}
+database = {'admin':'admin'}
 
 
 # Default - Show Data
