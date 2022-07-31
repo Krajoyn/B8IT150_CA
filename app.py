@@ -33,11 +33,10 @@ def login():
         if database[loginname]!=loginpassword:
             return render_template('login.html',info='Invalid Password')
         else:
-           return render_template('index.html',name=loginname)
+           return render_template('main.html',name=loginname)
 
-
-
-
+if __name__ == '__main__':
+    app.run()
 
 
 
