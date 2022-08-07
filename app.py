@@ -1,4 +1,6 @@
-from flask import Flask, Blueprint, render_template, request, flash, redirect, url_for
+from flask import Flask
+from flask import Flask, Blueprint, render_template, request, flash, redirect, url_for, request, session, abort
+import os
 # from flask_login import login_user, login_required, logout_user, current_user
 import pickle
 from flask_mysqldb import MySQL
@@ -39,11 +41,19 @@ def login():
 
 
 
-# # Login authentication function
-# @app.route("/login",methods=['POST','GET'])
-# def login():
+# Login authentication function
+@app.route("/login",methods=['POST'])
+def login():
+
+    if request.form['password'] == 'password' and request.form['username'] == 'admin':
+    session['logged_in'] = True
+    else:
+      flash('wrong password!')
+      return home() 
+
 #     database = {'admin':'admin'}
 #     return render_template("index.html")
+
 #     loginname=request.form['username']
 #     loginpassword=request.form['password']
 #     if loginname not in database:
@@ -58,7 +68,13 @@ def login():
 
 # Default - Show Data
 @app.route("/") 
-def hello(): 
+def home(): 
+
+    if not session.get('logged_in'):
+    return render_template('login.html')
+    else:
+    return "Hello test!"
+
     cur = mysql.connection.cursor() #create a connection to the SQL instance
     cur.execute('''SELECT * FROM students''') # execute an SQL statment
     rv = cur.fetchall() #Retreive all rows returend by the SQL statment
