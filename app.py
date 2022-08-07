@@ -1,4 +1,4 @@
-from flask import Flask, Blueprint, render_template, request, flash, redirect, url_for
+from flask import Flask, Blueprint, render_template, request, flash, redirect, url_for, 
 import pickle
 from flask_mysqldb import MySQL
 from flask_cors import CORS
@@ -18,21 +18,13 @@ mysql.init_app(app)
 # # Login authentication function
 # @app.route("/login",methods=['POST','GET'])
 # def login():
-#     print("1")
-#     print(1)
 #     database = {'admin':'admin'}
 #     return render_template("index.html")
-#     print("2")
-#     print(2)
 #     loginname=request.form['username']
 #     loginpassword=request.form['password']
-#     print("3")
-#     print(3)
 #     if loginname not in database:
 #       return render_template('index.html',info='Invalid User')
 #     else:
-#         print("4")
-#         print(4)
 #         if database[loginname]!=loginpassword:
 #             return render_template('index.html',info='Invalid Password')
 #         else:
@@ -41,7 +33,7 @@ mysql.init_app(app)
 
 
 # Default - Show Data
-@app.route("/hello") 
+@app.route("/") 
 def hello(): 
     cur = mysql.connection.cursor() #create a connection to the SQL instance
     cur.execute('''SELECT * FROM students''') # execute an SQL statment
