@@ -17,54 +17,6 @@ app.config['MYSQL_HOST'] = 'localhost'
 mysql.init_app(app)
 
 
-# @app.route("/login",methods=['POST','GET'])
-# def login():
-#     if request.method == 'POST':
-#         email = request.form.get('email')
-#         password = request.form.get('password')
-
-#         user = User.query.filter_by(email=email).first()
-#         if user:
-#             if check_password_hash(user.password, password):
-#                 flash('Logged in successfully!', category='success')
-#                 login_user(user, remember=True)
-#                 return redirect(url_for('views.home'))
-#             else:
-#                 flash('Incorrect password, try again.', category='error')
-#         else:
-#             flash('Email does not exist.', category='error')
-
-#     return render_template("login.html", user=current_user)
-
-
-
-
-
-
-# Login authentication function
-@app.route("/login",methods=['POST'])
-def login():
-    if request.form['password'] == 'password' and request.form['username'] == 'admin':
-      session['logged_in'] = True
-    else:
-      flash('wrong password!')
-      return home() 
-
-#     database = {'admin':'admin'}
-#     return render_template("index.html")
-
-#     loginname=request.form['username']
-#     loginpassword=request.form['password']
-#     if loginname not in database:
-#       return render_template('index.html',info='Invalid User')
-#     else:
-#         if database[loginname]!=loginpassword:
-#             return render_template('index.html',info='Invalid Password')
-#         else:
-#            return render_template('main-copy.html',name=loginname)
-
-
-
 # Default - Show Data
 @app.route("/") 
 def home(): 
@@ -98,8 +50,32 @@ def home():
 
 
 if __name__ == "__main__":
-  app.run(host='0.0.0.0',port='8080', ssl_context=('/home/aldasvmuser/cert.pem', '/home/aldasvmuser/privkey.pem')) #Run the flask app at port 8080
+  app.secret_key = os.urandom(12)
+  app.run(debug=True, host='0.0.0.0',port='8080', ssl_context=('/home/aldasvmuser/cert.pem', '/home/aldasvmuser/privkey.pem')) #Run the flask app at port 8080
 
+
+
+# Login authentication function
+@app.route("/login",methods=['POST'])
+def login():
+    if request.form['password'] == 'password' and request.form['username'] == 'admin':
+      session['logged_in'] = True
+    else:
+      flash('wrong password!')
+      return home() 
+
+#     database = {'admin':'admin'}
+#     return render_template("index.html")
+
+#     loginname=request.form['username']
+#     loginpassword=request.form['password']
+#     if loginname not in database:
+#       return render_template('index.html',info='Invalid User')
+#     else:
+#         if database[loginname]!=loginpassword:
+#             return render_template('index.html',info='Invalid Password')
+#         else:
+#            return render_template('main-copy.html',name=loginname)
 
 
 
