@@ -18,7 +18,7 @@ mysql.init_app(app)
 @app.route("/") 
 def hello(): 
     return render_template("login.html")
-    database = {'admin':'admin'}
+
 
     cur = mysql.connection.cursor() #create a connection to the SQL instance
     cur.execute('''SELECT * FROM students''') # execute an SQL statment
@@ -51,8 +51,9 @@ if __name__ == "__main__":
 
 
 # Login authentication function
-@app.route('/login',methods=['POST','GET'])
+@app.route("/login",methods=['POST','GET'])
 def login():
+    database = {'admin':'admin'}
     loginname=request.form['username']
     loginpassword=request.form['password']
     if loginname not in database:
