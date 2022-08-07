@@ -1,5 +1,5 @@
 # from flask import Flask
-from .auth.py import *
+from .auth.py import auth
 from flask import Flask, Blueprint, render_template, request, flash, redirect, url_for, request, session, abort
 import os
 # from flask_login import login_user, login_required, logout_user, current_user

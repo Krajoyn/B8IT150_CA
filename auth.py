@@ -2,7 +2,7 @@ from flask import Flask
 from flask import Flask, Blueprint, render_template, request, flash, redirect, url_for, request, session, abort
 import os
 
-auth = Flask(__name__)
+auth = Blueprint('auth', __name__)
 
 
 # Login authentication function
