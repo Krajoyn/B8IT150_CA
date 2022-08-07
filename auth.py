@@ -3,8 +3,6 @@ from flask import Flask, Blueprint, render_template, request, flash, redirect, u
 import os
 
 auth = Flask(__name__)
-CORS(auth)
-
 
 
 # Login authentication function
