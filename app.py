@@ -18,10 +18,11 @@ mysql.init_app(app)
 
 # Default - Show Data
 @app.route("/") 
-def hello(): 
+
     return render_template("login.html")
     database = {'admin':'admin'}
-
+    
+def hello(): 
   cur = mysql.connection.cursor() #create a connection to the SQL instance
   cur.execute('''SELECT * FROM students''') # execute an SQL statment
   rv = cur.fetchall() #Retreive all rows returend by the SQL statment
