@@ -19,7 +19,7 @@ mysql.init_app(app)
 
 
 # Login authentication function
-@app.route("/login",methods=['POST'])
+@app.route("/login",methods=['POST', 'GET'])
 def login():
     if request.form['password'] == 'password' and request.form['username'] == 'admin':
       session['logged_in'] = True
