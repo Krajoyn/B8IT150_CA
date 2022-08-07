@@ -1,4 +1,4 @@
-from flask import Flask
+# from flask import Flask
 from flask import Flask, Blueprint, render_template, request, flash, redirect, url_for, request, session, abort
 import os
 # from flask_login import login_user, login_required, logout_user, current_user
@@ -134,6 +134,7 @@ def index():
 
 if __name__ == "__main__":
   app.secret_key = os.urandom(12)
-  app.run(debug=True, host='0.0.0.0',port='8080', ssl_context=('/home/aldasvmuser/cert.pem', '/home/aldasvmuser/privkey.pem')) #Run the flask app at port 8080
+  app.run(debug=True, ssl_context=('/home/aldasvmuser/cert.pem', '/home/aldasvmuser/privkey.pem')) #Run the flask app at port 8080
+  # app.run(debug=True, host='0.0.0.0',port='8080', ssl_context=('/home/aldasvmuser/cert.pem', '/home/aldasvmuser/privkey.pem')) #Run the flask app at port 8080
 
 
