@@ -17,43 +17,6 @@ app.config['MYSQL_HOST'] = 'localhost'
 mysql.init_app(app)
 
 
-# Default - Show Data
-@app.route("/") 
-def home(): 
-
-    if not session.get('logged_in'):
-      return render_template('login.html')
-    else:
-      return "Hello test!"
-
-    cur = mysql.connection.cursor() #create a connection to the SQL instance
-    cur.execute('''SELECT * FROM students''') # execute an SQL statment
-    rv = cur.fetchall() #Retreive all rows returend by the SQL statment
-    Results=[]
-    for row in rv: #Format the Output Results and add to return string
-      Result={}
-      Result['Name']=row[0]
-      Result['Email']=row[1]
-      Result['ID']=row[2]
-      Result['DOB']=row[3]
-      Result['Course']=row[4]
-      Result['Phone']=row[5]
-      Result['Address']=row[6]
-      Results.append(Result)
-    response={'Results':Results, 'count':len(Results)}
-    ret=app.response_class(
-      response=json.dumps(response),
-      status=200,
-      mimetype='application/json'
-    )
-    return ret #Return the data in a string format
-
-
-if __name__ == "__main__":
-  app.secret_key = os.urandom(12)
-  app.run(debug=True, host='0.0.0.0',port='8080', ssl_context=('/home/aldasvmuser/cert.pem', '/home/aldasvmuser/privkey.pem')) #Run the flask app at port 8080
-
-
 
 # Login authentication function
 @app.route("/login",methods=['POST'])
@@ -129,4 +92,44 @@ def update():
   mysql.connection.commit()
   return '{"Result":"Success"}'
 
-#
+
+
+
+
+# Default - Show Data
+@app.route("/") 
+def home(): 
+
+    if not session.get('logged_in'):
+      return render_template('login.html')
+    else:
+      return "Hello test!"
+
+    cur = mysql.connection.cursor() #create a connection to the SQL instance
+    cur.execute('''SELECT * FROM students''') # execute an SQL statment
+    rv = cur.fetchall() #Retreive all rows returend by the SQL statment
+    Results=[]
+    for row in rv: #Format the Output Results and add to return string
+      Result={}
+      Result['Name']=row[0]
+      Result['Email']=row[1]
+      Result['ID']=row[2]
+      Result['DOB']=row[3]
+      Result['Course']=row[4]
+      Result['Phone']=row[5]
+      Result['Address']=row[6]
+      Results.append(Result)
+    response={'Results':Results, 'count':len(Results)}
+    ret=app.response_class(
+      response=json.dumps(response),
+      status=200,
+      mimetype='application/json'
+    )
+    return ret #Return the data in a string format
+
+
+if __name__ == "__main__":
+  app.secret_key = os.urandom(12)
+  app.run(debug=True, host='0.0.0.0',port='8080', ssl_context=('/home/aldasvmuser/cert.pem', '/home/aldasvmuser/privkey.pem')) #Run the flask app at port 8080
+
+
