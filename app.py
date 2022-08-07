@@ -98,7 +98,7 @@ def update():
 
 # Default - Show Data
 @app.route("/") 
-def home(): 
+def index(): 
 
     if not session.get('logged_in'):
       return render_template('login.html')
