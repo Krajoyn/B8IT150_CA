@@ -50,13 +50,17 @@ if __name__ == "__main__":
 # Login authentication function
 @app.route("/login",methods=['POST','GET'])
 def login():
+    print("1")
     database = {'admin':'admin'}
     return render_template("login.html")
+    print("2")
     loginname=request.form['username']
     loginpassword=request.form['password']
+    print("3")
     if loginname not in database:
       return render_template('login.html',info='Invalid User')
     else:
+        print("4")
         if database[loginname]!=loginpassword:
             return render_template('login.html',info='Invalid Password')
         else:
