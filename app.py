@@ -26,7 +26,6 @@ def login():
       return render_template('main.html')
 
     else:
-
       flash('wrong password!')
       print("Password incorrect")
       return render_template('login.html', info="Invalid username and password combination")
