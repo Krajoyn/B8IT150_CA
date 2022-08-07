@@ -1,4 +1,5 @@
 from flask import Flask, Blueprint, render_template, request, flash, redirect, url_for
+from flask_login import login_user, login_required, logout_user, current_user
 import pickle
 from flask_mysqldb import MySQL
 from flask_cors import CORS
@@ -12,6 +13,29 @@ app.config['MYSQL_PASSWORD'] = 'webPass'
 app.config['MYSQL_DB'] = 'student'
 app.config['MYSQL_HOST'] = 'localhost' 
 mysql.init_app(app)
+
+
+@app.route("/login",methods=['POST','GET'])
+def login():
+    if request.method == 'POST':
+        email = request.form.get('email')
+        password = request.form.get('password')
+
+        user = User.query.filter_by(email=email).first()
+        if user:
+            if check_password_hash(user.password, password):
+                flash('Logged in successfully!', category='success')
+                login_user(user, remember=True)
+                return redirect(url_for('views.home'))
+            else:
+                flash('Incorrect password, try again.', category='error')
+        else:
+            flash('Email does not exist.', category='error')
+
+    return render_template("login.html", user=current_user)
+
+
+
 
 
 
