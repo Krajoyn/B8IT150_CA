@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request, flash, redirect, url_for
+from flask import Flask, Blueprint, render_template, request, flash, redirect, url_for
 from .models import User
 from flask_login import login_user, login_required
 import pickle
@@ -18,11 +18,11 @@ mysql.init_app(app)
 
 # Default - Show Data
 @app.route("/") 
-
+def hello(): 
     return render_template("login.html")
     database = {'admin':'admin'}
-    
-def hello(): 
+
+
   cur = mysql.connection.cursor() #create a connection to the SQL instance
   cur.execute('''SELECT * FROM students''') # execute an SQL statment
   rv = cur.fetchall() #Retreive all rows returend by the SQL statment
@@ -54,7 +54,7 @@ if __name__ == "__main__":
 
 
 # Login authentication function
-@app.route('/form_login',methods=['POST','GET'])
+@app.route('/login',methods=['POST','GET'])
 def login():
     loginname=request.form['username']
     loginpassword=request.form['password']
