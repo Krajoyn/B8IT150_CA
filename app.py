@@ -46,7 +46,7 @@ def login():
 def login():
 
     if request.form['password'] == 'password' and request.form['username'] == 'admin':
-    session['logged_in'] = True
+      session['logged_in'] = True
     else:
       flash('wrong password!')
       return home() 
