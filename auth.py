@@ -1,5 +1,5 @@
 # Login authentication function
-@app.route("/login",methods=['POST', 'GET'])
+@auth.route("/login",methods=['POST', 'GET'])
 def login():
     if request.form['password'] == 'password' and request.form['username'] == 'admin':
       session['logged_in'] = True
