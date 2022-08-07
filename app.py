@@ -17,6 +17,7 @@ mysql.init_app(app)
 # Default - Show Data
 @app.route("/hello") 
 def hello(): 
+    database = {'admin':'admin'}
     return render_template("login.html")
 
 
@@ -57,12 +58,12 @@ def login():
     loginname=request.form['username']
     loginpassword=request.form['password']
     if loginname not in database:
-      return render_template('login.html',info='Invalid User')
+      return render_template('/templates/login.html',info='Invalid User')
     else:
         if database[loginname]!=loginpassword:
-            return render_template('login.html',info='Invalid Password')
+            return render_template('/templates/login.html',info='Invalid Password')
         else:
-           return render_template('main.html',name=loginname)
+           return render_template('/templates/main.html',name=loginname)
 
 
 
