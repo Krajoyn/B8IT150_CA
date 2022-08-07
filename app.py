@@ -71,9 +71,9 @@ def login():
 def home(): 
 
     if not session.get('logged_in'):
-    return render_template('login.html')
+      return render_template('login.html')
     else:
-    return "Hello test!"
+      return "Hello test!"
 
     cur = mysql.connection.cursor() #create a connection to the SQL instance
     cur.execute('''SELECT * FROM students''') # execute an SQL statment
