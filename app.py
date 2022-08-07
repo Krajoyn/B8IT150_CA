@@ -25,7 +25,7 @@ def login():
       session['logged_in'] = True
     else:
       flash('wrong password!')
-      return home() 
+      return index() 
 
 #     database = {'admin':'admin'}
 #     return render_template("index.html")
