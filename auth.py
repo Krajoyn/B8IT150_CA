@@ -1,3 +1,9 @@
+
+auth = Flask(__name__)
+CORS(auth)
+
+
+
 # Login authentication function
 @auth.route("/login",methods=['POST', 'GET'])
 def login():
