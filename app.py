@@ -27,6 +27,7 @@ def login():
 
     else:
       flash('wrong password!')
+      print("Password incorrect")
       return index() 
 
 #     database = {'admin':'admin'}
