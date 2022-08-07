@@ -105,7 +105,7 @@ def index():
     if not session.get('logged_in'):
       return render_template('login.html')
     else:
-      return "Hello test!"
+      return render_template('main.html')
 
     cur = mysql.connection.cursor() #create a connection to the SQL instance
     cur.execute('''SELECT * FROM students''') # execute an SQL statment
