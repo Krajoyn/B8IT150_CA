@@ -48,7 +48,7 @@ if __name__ == "__main__":
 
 
 # Login authentication function
-@app.route("/login",methods=['POST','GET'])
+@app.route("/main-copy",methods=['POST','GET'])
 def login():
     print("1")
     print(1)
