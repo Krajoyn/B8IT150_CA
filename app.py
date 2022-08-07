@@ -17,10 +17,6 @@ mysql.init_app(app)
 # Default - Show Data
 @app.route("/hello") 
 def hello(): 
-    database = {'admin':'admin'}
-    return render_template("login.html")
-
-
     cur = mysql.connection.cursor() #create a connection to the SQL instance
     cur.execute('''SELECT * FROM students''') # execute an SQL statment
     rv = cur.fetchall() #Retreive all rows returend by the SQL statment
@@ -55,15 +51,16 @@ if __name__ == "__main__":
 @app.route("/login",methods=['POST','GET'])
 def login():
     database = {'admin':'admin'}
+    return render_template("login.html")
     loginname=request.form['username']
     loginpassword=request.form['password']
     if loginname not in database:
-      return render_template('/templates/login.html',info='Invalid User')
+      return render_template('login.html',info='Invalid User')
     else:
         if database[loginname]!=loginpassword:
-            return render_template('/templates/login.html',info='Invalid Password')
+            return render_template('login.html',info='Invalid Password')
         else:
-           return render_template('/templates/main.html',name=loginname)
+           return render_template('main.html',name=loginname)
 
 
 
