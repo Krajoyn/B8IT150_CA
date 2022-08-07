@@ -1,5 +1,4 @@
 from flask import Flask, Blueprint, render_template, request, flash, redirect, url_for
-from flask_login import login_user, login_required
 import pickle
 from flask_mysqldb import MySQL
 from flask_cors import CORS
