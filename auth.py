@@ -1,15 +1,15 @@
 from flask import Flask,request,render_template
 import pickle
 
-app = Flask(__name__)
+auth = Flask(__name__)
 
 
-@app.route('/')
+@auth.route('/')
 def hello_world():
     return render_template("login.html")
 database={'nachi':'123','james':'aac','karthik':'asdsf'}
 
-@app.route('/form_login',methods=['POST','GET'])
+@auth.route('/form_login',methods=['POST','GET'])
 def login():
     name1=request.form['username']
     pwd=request.form['password']
@@ -22,4 +22,4 @@ def login():
            return render_template('home.html',name=name1)
 
 if __name__ == '__main__':
-    app.run()
+    auth.run(debug=True, host='0.0.0.0',port='8080', ssl_context=('/home/aldasvmuser/cert.pem', '/home/aldasvmuser/privkey.pem')) #Run the flask app at port 8080
