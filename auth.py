@@ -24,7 +24,8 @@ def login():
 
 if __name__ == '__main__':
   try:
-    auth.rundebug=True, host='0.0.0.0',port='8080', ssl_context=('/home/aldasvmuser/cert.pem', '/home/aldasvmuser/privkey.pem')
+    auth.run(debug=True, host='0.0.0.0',port='8080', ssl_context=('/home/aldasvmuser/cert.pem', 
+      '/home/aldasvmuser/privkey.pem'))
   except:
     print('unable to open port')
 
