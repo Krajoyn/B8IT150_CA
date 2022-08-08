@@ -24,4 +24,6 @@ def login():
            return render_template('home.html',name=name1)
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True, host='0.0.0.0',port='443', ssl_context=('/home/aldasvmuser/cert.pem', '/home/aldasvmuser/privkey.pem'))
+    app.secret_key = os.urandom(12)
+  
