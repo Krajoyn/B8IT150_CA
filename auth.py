@@ -29,4 +29,4 @@ def login():
 
 
 if __name__ == "__main__":
-  app.run(debug=True, host='0.0.0.0', ssl_context=('/home/aldasvmuser/cert.pem', '/home/aldasvmuser/privkey.pem')) #Run the flask app at port 8080
+  auth.run(debug=True, host='0.0.0.0', ssl_context=('/home/aldasvmuser/cert.pem', '/home/aldasvmuser/privkey.pem')) #Run the flask app at port 8080
