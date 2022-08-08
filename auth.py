@@ -1,7 +1,7 @@
 from flask import Flask,request,render_template
 import pickle
 
-auth = Flask(__name__)
+auth = Flask(__name__, template_folder='templates')
 
 
 @auth.route('/')
