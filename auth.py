@@ -29,5 +29,4 @@ def login():
 
 
 if __name__ == "__main__":
-  app.secret_key = os.urandom(12)
   app.run(debug=True, host='0.0.0.0', ssl_context=('/home/aldasvmuser/cert.pem', '/home/aldasvmuser/privkey.pem')) #Run the flask app at port 8080
