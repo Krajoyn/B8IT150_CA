@@ -1,4 +1,4 @@
-from flask import Flask,request,render_template
+from flask import Flask, request, render_template
 import pickle
 
 auth = Flask(__name__)
@@ -21,5 +21,11 @@ def login():
         else:
            return render_template('home.html',name=name1)
 
+
 if __name__ == '__main__':
-    auth.run()
+  try:
+    auth.rundebug=True, host='0.0.0.0',port='8080', ssl_context=('/home/aldasvmuser/cert.pem', '/home/aldasvmuser/privkey.pem')
+  except:
+    print('unable to open port')
+
+
