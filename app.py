@@ -34,7 +34,7 @@ def login():
         if database[username]!=password:
             return render_template('login.html',info='Invalid Password')
         else:
-           return render_template('home.html',name=username)
+           return render_template('main.html',name=username)
 
 
 
