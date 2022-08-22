@@ -7,7 +7,7 @@ from flask_mysqldb import MySQL
 from flask_cors import CORS
 import json
 mysql = MySQL()
-app = Flask(__name__, template_folder='templates')
+app = Flask(__name__, template_folder='html/templates')
 CORS(app)
 # My SQL Instance configurations
 app.config['MYSQL_USER'] = 'web'
