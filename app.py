@@ -24,7 +24,8 @@ database={'admin':'admin'}
 
 
 # Referenced from https://github.com/nachi-hebbar/Login-Page-With-Flask-HTML 
-@app.route('/form_login',methods=['POST','GET'])
+# @app.route('/form_login',methods=['POST','GET'])
+@app.route('/form_login',methods=['POST'])
 def login():
     username=request.form['username']
     password=request.form['password']
