@@ -7,7 +7,7 @@ from flask_mysqldb import MySQL
 from flask_cors import CORS
 import json
 mysql = MySQL()
-app = Flask(__name__)
+app = Flask(__name__, template_folder='templates')
 CORS(app)
 # My SQL Instance configurations
 app.config['MYSQL_USER'] = 'web'
@@ -19,45 +19,18 @@ mysql.init_app(app)
 
 
 
-
-
-
-# Default - Show Data
-@app.route("/") 
-def index(): 
-
-    if not session.get('logged_in'):
-      return render_template('login.html')
+@app.route('/form_login',methods=['POST','GET'])
+def login():
+    username=request.form['username']
+    password=request.form['password']
+    if usernam not in database:
+      return render_template('login.html',info='Invalid User')
     else:
-      return render_template('main.html')
+        if database[username]!=password:
+            return render_template('login.html',info='Invalid Password')
+        else:
+           return render_template('home.html',name=username)
 
-    cur = mysql.connection.cursor() #create a connection to the SQL instance
-    cur.execute('''SELECT * FROM students''') # execute an SQL statment
-    rv = cur.fetchall() #Retreive all rows returend by the SQL statment
-    Results=[]
-    for row in rv: #Format the Output Results and add to return string
-      Result={}
-      Result['Name']=row[0]
-      Result['Email']=row[1]
-      Result['ID']=row[2]
-      Result['DOB']=row[3]
-      Result['Course']=row[4]
-      Result['Phone']=row[5]
-      Result['Address']=row[6]
-      Results.append(Result)
-    response={'Results':Results, 'count':len(Results)}
-    ret=app.response_class(
-      response=json.dumps(response),
-      status=200,
-      mimetype='application/json'
-    )
-    return ret #Return the data in a string format
-
-
-if __name__ == "__main__":
-  app.secret_key = os.urandom(12)
-  # app.run(debug=True, ssl_context=('/home/aldasvmuser/cert.pem', '/home/aldasvmuser/privkey.pem')) #Run the flask app at port 8080
-  app.run(debug=True, host='0.0.0.0',port='8080', ssl_context=('/home/aldasvmuser/cert.pem', '/home/aldasvmuser/privkey.pem')) #Run the flask app at port 8080
 
 
 
@@ -112,37 +85,44 @@ def update():
 
 
 
+# Default - Show Data
+@app.route("/") 
+def index(): 
+
+    return render_template("login.html")
+database={'admin':'admin'}
+
+
+    cur = mysql.connection.cursor() #create a connection to the SQL instance
+    cur.execute('''SELECT * FROM students''') # execute an SQL statment
+    rv = cur.fetchall() #Retreive all rows returend by the SQL statment
+    Results=[]
+    for row in rv: #Format the Output Results and add to return string
+      Result={}
+      Result['Name']=row[0]
+      Result['Email']=row[1]
+      Result['ID']=row[2]
+      Result['DOB']=row[3]
+      Result['Course']=row[4]
+      Result['Phone']=row[5]
+      Result['Address']=row[6]
+      Results.append(Result)
+    response={'Results':Results, 'count':len(Results)}
+    ret=app.response_class(
+      response=json.dumps(response),
+      status=200,
+      mimetype='application/json'
+    )
+    return ret #Return the data in a string format
+
+
+if __name__ == "__main__":
+  app.secret_key = os.urandom(12)
+  # app.run(debug=True, ssl_context=('/home/aldasvmuser/cert.pem', '/home/aldasvmuser/privkey.pem')) #Run the flask app at port 8080
+  app.run(debug=True, host='0.0.0.0',port='8080', ssl_context=('/home/aldasvmuser/cert.pem', '/home/aldasvmuser/privkey.pem')) #Run the flask app at port 8080
 
 
 
-
-
-
-# Login authentication function
-@auth.route("/login",methods=['POST', 'GET'])
-def login():
-    if request.form['password'] == 'password' and request.form['username'] == 'admin':
-      session['logged_in'] = True
-      return render_template('main.html')
-
-    else:
-      flash('wrong password!')
-      print("Password incorrect")
-      return render_template('login.html', info="Invalid username and password combination")
-      # return index() 
-
-#     database = {'admin':'admin'}
-#     return render_template("index.html")
-
-#     loginname=request.form['username']
-#     loginpassword=request.form['password']
-#     if loginname not in database:
-#       return render_template('index.html',info='Invalid User')
-#     else:
-#         if database[loginname]!=loginpassword:
-#             return render_template('index.html',info='Invalid Password')
-#         else:
-#            return render_template('main.html',name=loginname)
 
 
 
