@@ -90,8 +90,7 @@ def update():
 def index(): 
 
     return render_template("login.html")
-database={'admin':'admin'}
-
+    database={'admin':'admin'}
 
     cur = mysql.connection.cursor() #create a connection to the SQL instance
     cur.execute('''SELECT * FROM students''') # execute an SQL statment
