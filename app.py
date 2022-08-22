@@ -23,7 +23,7 @@ def hello_world():
 database={'admin':'admin'}
 
 
-
+# Referenced from https://github.com/nachi-hebbar/Login-Page-With-Flask-HTML 
 @app.route('/form_login',methods=['POST','GET'])
 def login():
     username=request.form['username']
