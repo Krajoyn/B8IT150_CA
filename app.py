@@ -28,7 +28,7 @@ database={'admin':'admin'}
 def login():
     username=request.form['username']
     password=request.form['password']
-    if usernam not in database:
+    if username not in database:
       return render_template('login.html',info='Invalid User')
     else:
         if database[username]!=password:
