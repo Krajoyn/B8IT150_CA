@@ -1,13 +1,11 @@
-# from flask import Flask
-from flask import Flask, Blueprint, render_template, request, flash, redirect, url_for, request, session, abort
-import os
-# from flask_login import login_user, login_required, logout_user, current_user
-import pickle
+from flask import Flask
+from flask import request
 from flask_mysqldb import MySQL
 from flask_cors import CORS
 import json
 mysql = MySQL()
-app = Flask(__name__, template_folder='html/templates')
+app = Flask(
+  __name__)
 CORS(app)
 # My SQL Instance configurations
 app.config['MYSQL_USER'] = 'web'
@@ -15,31 +13,6 @@ app.config['MYSQL_PASSWORD'] = 'webPass'
 app.config['MYSQL_DB'] = 'student'
 app.config['MYSQL_HOST'] = 'localhost' 
 mysql.init_app(app)
-
-
-@app.route('/')
-def hello_world():
-    return render_template("login.html")
-database={'admin':'admin'}
-
-
-# Referenced from https://github.com/nachi-hebbar/Login-Page-With-Flask-HTML 
-# @app.route('/form_login',methods=['POST','GET'])
-@app.route('/form_login',methods=['POST'])
-def login():
-    username=request.form['username']
-    password=request.form['password']
-    if username not in database:
-      return render_template('login.html',info='Invalid User')
-    else:
-        if database[username]!=password:
-            return render_template('login.html',info='Invalid Password')
-        else:
-           return render_template('main.html',name=username)
-
-
-
-
 
 
 # Add Student function - gets input from user and executes an SQL command
@@ -89,48 +62,29 @@ def update():
   mysql.connection.commit()
   return '{"Result":"Success"}'
 
-
-
-# Default - Show Data
+#Default - Show Data
 @app.route("/") 
-def index(): 
-
-    # return render_template("login.html")
-    # database={'admin':'admin'}
-
-    cur = mysql.connection.cursor() #create a connection to the SQL instance
-    cur.execute('''SELECT * FROM students''') # execute an SQL statment
-    rv = cur.fetchall() #Retreive all rows returend by the SQL statment
-    Results=[]
-    for row in rv: #Format the Output Results and add to return string
-      Result={}
-      Result['Name']=row[0]
-      Result['Email']=row[1]
-      Result['ID']=row[2]
-      Result['DOB']=row[3]
-      Result['Course']=row[4]
-      Result['Phone']=row[5]
-      Result['Address']=row[6]
-      Results.append(Result)
-    response={'Results':Results, 'count':len(Results)}
-    ret=app.response_class(
-      response=json.dumps(response),
-      status=200,
-      mimetype='application/json'
-    )
-    return ret #Return the data in a string format
-
-
+def hello(): 
+  cur = mysql.connection.cursor() #create a connection to the SQL instance
+  cur.execute('''SELECT * FROM students''') # execute an SQL statment
+  rv = cur.fetchall() #Retreive all rows returend by the SQL statment
+  Results=[]
+  for row in rv: #Format the Output Results and add to return string
+    Result={}
+    Result['Name']=row[0]
+    Result['Email']=row[1]
+    Result['ID']=row[2]
+    Result['DOB']=row[3]
+    Result['Course']=row[4]
+    Result['Phone']=row[5]
+    Result['Address']=row[6]
+    Results.append(Result)
+  response={'Results':Results, 'count':len(Results)}
+  ret=app.response_class(
+    response=json.dumps(response),
+    status=200,
+    mimetype='application/json'
+  )
+  return ret #Return the data in a string format
 if __name__ == "__main__":
-  app.secret_key = os.urandom(12)
-  # app.run(debug=True, ssl_context=('/home/aldasvmuser/cert.pem', '/home/aldasvmuser/privkey.pem')) #Run the flask app at port 8080
-  app.run(debug=True, host='0.0.0.0',port='8080', ssl_context=('/home/aldasvmuser/cert.pem', '/home/aldasvmuser/privkey.pem')) #Run the flask app at port 8080
-
-
-
-
-
-
-
-
-
+  app.run(host='0.0.0.0',port='8080', ssl_context=('/home/aldasvmuser/cert.pem', '/home/aldasvmuser/privkey.pem')) #Run the flask app at port 8080
