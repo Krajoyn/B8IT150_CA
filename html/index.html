@@ -49,7 +49,11 @@
   </div>
 
   <table id='studentTable' data-filter-control="true" >
-    <caption>Student Database</caption>
+    <caption>Student Database
+      <br>
+      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter student name to search" title="Type in a name">
+
+    </caption>
     <thead>
       <tr>
         <th onclick="sortTable(0)">ID</th>
@@ -86,7 +90,7 @@
 
 
   <div class="placeholder-group">
-    <label>Search student by name: 
+    <label>Search the database 
       <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter student name to search" title="Type in a name">
     </label>
 
@@ -137,7 +141,9 @@
 
 
 
-  //Taken from https://www.w3schools.com/howto/howto_js_filter_table.asp
+  //Referenced the following when creating
+  // https://www.w3schools.com/howto/howto_js_filter_table.asp
+  // https://www.youtube.com/watch?v=eLQhybnA9hw
   // SEARCH FUNCTION
   function myFunction() {
   var input, filter, table, tr, td, i, txtValue;
@@ -181,6 +187,15 @@
 //     }       
 //   }
 // }
+
+
+
+
+
+
+
+
+
 
 
 // Taken from https://www.w3schools.com/howto/howto_js_sort_table.asp
