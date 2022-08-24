@@ -50,7 +50,7 @@
 
   <input type="text" id="myInput" onkeyup='tableSearch()' placeholder="Name">
 
-  <table id='studentTable'>
+  <table id='studentTable' data-filter-control="true" >
     <caption>Student Database</caption>
     <thead>
       <tr>
@@ -135,6 +135,9 @@
     let updateStudent=()=>{
       fetch(baseURL+'update?id='+document.querySelector('#Id').value+'&name='+document.querySelector('#Name').value+'&email='+document.querySelector('#Email').value+'&dob='+document.querySelector('#DOB').value+'&course='+document.querySelector('#Course').value+'&phone='+document.querySelector('#Phone').value+'&address='+document.querySelector('#Address').value).then(resp=>{alert('Student Updated')});}
 
+
+
+
   //Taken from https://www.w3schools.com/howto/howto_js_filter_table.asp
   // SEARCH FUNCTION
   function myFunction() {
@@ -144,7 +147,7 @@
   table = document.getElementById("studentTable");
   tr = table.getElementsByTagName("tr");
   for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("th")[1];
+    td = tr[i].getElementsByTagName("th")[];
     if (td) {
       txtValue = td.textContent || td.innerText;
       if (txtValue.toUpperCase().indexOf(filter) > -1) {
