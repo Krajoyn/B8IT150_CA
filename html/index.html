@@ -48,8 +48,6 @@
     </p>
   </div>
 
-  <input type="text" id="myInput" onkeyup='tableSearch()' placeholder="Name">
-
   <table id='studentTable' data-filter-control="true" >
     <caption>Student Database</caption>
     <thead>
@@ -138,6 +136,7 @@
 
 
 
+
   //Taken from https://www.w3schools.com/howto/howto_js_filter_table.asp
   // SEARCH FUNCTION
   function myFunction() {
@@ -147,7 +146,12 @@
   table = document.getElementById("studentTable");
   tr = table.getElementsByTagName("tr");
   for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("th")[];
+    td = tr[i].getElementsByTagName("th")[1];
+    td = tr[i].getElementsByTagName("th")[2];    
+    td = tr[i].getElementsByTagName("th")[3];
+    td = tr[i].getElementsByTagName("th")[4];
+    td = tr[i].getElementsByTagName("th")[5];
+    td = tr[i].getElementsByTagName("th")[6];
     if (td) {
       txtValue = td.textContent || td.innerText;
       if (txtValue.toUpperCase().indexOf(filter) > -1) {
@@ -158,6 +162,30 @@
     }       
   }
 }
+
+
+
+
+//   //Taken from https://www.w3schools.com/howto/howto_js_filter_table.asp
+//   // SEARCH FUNCTION
+//   function myFunction() {
+//   var input, filter, table, tr, td, i, txtValue;
+//   input = document.getElementById("myInput");
+//   filter = input.value.toUpperCase();
+//   table = document.getElementById("studentTable");
+//   tr = table.getElementsByTagName("tr");
+//   for (i = 0; i < tr.length; i++) {
+//     td = tr[i].getElementsByTagName("th")[1];
+//     if (td) {
+//       txtValue = td.textContent || td.innerText;
+//       if (txtValue.toUpperCase().indexOf(filter) > -1) {
+//         tr[i].style.display = "";
+//       } else {
+//         tr[i].style.display = "none";
+//       }
+//     }       
+//   }
+// }
 
 
 // Taken from https://www.w3schools.com/howto/howto_js_sort_table.asp
@@ -252,29 +280,6 @@ function editRow()
   table.rows[rIndex].cells[2].innerHTML = document.getElementById("Address").value;
 }
           
-
-
-function tableSearch() {
-  let input, filter, table, tr, td, txtValue;
-
-  //Intialising Variables
-  input = document.getElementById("myInput");
-  filter = input.value.toUpperCase();
-  table = document.getElementById("studentTable");
-  tr = table.getElementsByTagName("th");
-
-  for (let i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("th")[1];
-    if (td) {
-      txtValue = td.textContent || td.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        tr[i].style.display = "";
-      } else {
-        tr[i].style.display = "none";
-      }
-    }
-  }
-}
 
 
   </script>
