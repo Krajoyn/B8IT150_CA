@@ -145,13 +145,8 @@
   filter = input.value.toUpperCase();
   table = document.getElementById("studentTable");
   tr = table.getElementsByTagName("tr");
-  for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("th")[1];
-    td = tr[i].getElementsByTagName("th")[2];    
-    td = tr[i].getElementsByTagName("th")[3];
-    td = tr[i].getElementsByTagName("th")[4];
-    td = tr[i].getElementsByTagName("th")[5];
-    td = tr[i].getElementsByTagName("th")[6];
+  for (i = 1; i < tr.length; i++) {
+    td = tr[i];
     if (td) {
       txtValue = td.textContent || td.innerText;
       if (txtValue.toUpperCase().indexOf(filter) > -1) {
