@@ -55,16 +55,16 @@ h2{
 
 
 
-/*#studentTable caption {
+#studentTable caption {
   font-size: 100;
   background: purple;
   color: white;
   text-align: center;
   font-weight: bold;
   padding: 20px 20px;
-}*/
+}
 
-/*#studentTable {
+#studentTable {
   background-color: #1E90FF;
   border-collapse: collapse;
   margin-left: auto;
@@ -75,20 +75,19 @@ h2{
   font-weight: lighter;
   border: 1px solid;
   border-color: #00008B;
-}*/
+}
 
-/*
+
 #studentTable thead {
   height: 50px;
   background-color: #00008B;
-
 }
 
 
 #studentTable thead th {
   padding: 8px;
   color: white;
-}*/
+}
 
 
 /*Taken from https://www.w3schools.com/Css/css_table_style.asp*/
