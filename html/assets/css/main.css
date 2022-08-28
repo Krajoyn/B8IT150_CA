@@ -12,6 +12,15 @@ html, body{
   height: 100%
 }
 
+h1{
+  text-align: center;
+}
+
+h2{
+  text-align: center;
+}
+
+
 .header {
   padding: 60px;
   text-align: center;
@@ -19,6 +28,7 @@ html, body{
   color: white;
   font-size: 30px;
 }
+
 
 .content:after {
   content: "";
@@ -30,30 +40,17 @@ html, body{
 .column {
   float: left;
   padding: 10px;
-  width: 100%;
 }
 
 /* Left and right column */
-.column.side {
+.column-left {
   width: 33%;
 }
 
 /* Middle column */
-.column.middle {
+.column-right {
   width: 66%;
 }
-
-
-h1{
-  text-align: center;
-}
-
-h2{
-  text-align: center;
-}
-
-
-
 
 
 #studentTable caption {
@@ -70,7 +67,7 @@ h2{
   border-collapse: collapse;
   margin-left: auto;
   margin-right: auto;
-  min-width: 650px;
+  min-width: 400px;
   overflow: hidden;
   text-align: center;
   font-weight: lighter;
@@ -78,18 +75,15 @@ h2{
   border-color: #00008B;
 }
 
-
 #studentTable thead {
   height: 50px;
   background-color: #00008B;
 }
 
-
 #studentTable thead th {
   padding: 8px;
   color: white;
 }
-
 
 /*Taken from https://www.w3schools.com/Css/css_table_style.asp*/
 #studentTable tr:nth-child(even) {
@@ -105,8 +99,8 @@ h2{
 /*Referenced https://www.w3schools.com/csS/css3_buttons.asp*/
 
 .dbButtons {
-  margin-left:25%;
-  margin-right:25%;
+  margin-left:15%;
+  margin-right:15%;
 }
 
 .dbButtons button {
@@ -134,11 +128,6 @@ h2{
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
-
-
-
-
-
 
 
 .button-group {
