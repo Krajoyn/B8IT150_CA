@@ -153,7 +153,7 @@ main{
 }*/
 
 
-.button-group {
+.placeholder-group {
   height: 100%;
   width: 200px;
   position: fixed;
@@ -166,7 +166,7 @@ main{
 
 
 /* Side navigation links */
-.button-group button {
+.placeholder-group button {
   color: white;
   padding: 16px;
   text-decoration: none;
@@ -174,7 +174,7 @@ main{
 }
 
 /* Change color on hover */
-.button-group button:hover {
+.placeholder-group button:hover {
   background-color: #ddd;
   color: black;
 }
@@ -184,7 +184,7 @@ main{
 
 
 
-.placeholder-group {
+/*.placeholder-group {
   margin-right: 30%;
   margin-left: 30%;
 }
@@ -207,7 +207,7 @@ main{
   margin-left: 5%;
   margin-right: 5%;
   padding: 10px;
-}
+}*/
 
 .footer {
    left: 0;
