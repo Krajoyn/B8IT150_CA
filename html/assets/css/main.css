@@ -2,6 +2,12 @@
   font-family: calibre;
 }
 
+@media (max-width: 600px) {
+  .column.side, .column.middle {
+    width: 100%;
+  }
+}
+
 html, body{
   height: 100%
 }
@@ -14,10 +20,30 @@ html, body{
   font-size: 30px;
 }
 
-.content {
-  padding:20px;
-  text-align: center;
+.content:after {
+  content: "";
+  display: table;
+  clear: both;
 }
+
+/* Create three unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Left and right column */
+.column.side {
+  width: 25%;
+}
+
+/* Middle column */
+.column.middle {
+  width: 50%;
+}
+
+
 
 .login {
   padding:20px;
@@ -90,7 +116,7 @@ main{
 
 
 /*Referenced https://www.w3schools.com/csS/css3_buttons.asp*/
-/*
+
 .dbButtons {
   margin-left:25%;
   margin-right:25%;
@@ -121,14 +147,14 @@ main{
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
-*/
 
 
 
 
 
 
-/*.button-group {
+
+.button-group {
   margin-right: 10%;
   margin-left: 10%;
 }
@@ -156,42 +182,9 @@ main{
   background-color: #00008B;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
-}*/
-
-
+}
 
 .placeholder-group {
-  height: 100%;
-  width: 200px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-}
-
-
-/* Side navigation links */
-.placeholder-group button {
-  color: white;
-  padding: 16px;
-  text-decoration: none;
-  display: block;
-}
-
-/* Change color on hover */
-.placeholder-group button:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-
-
-
-
-
-/*.placeholder-group {
   margin-right: 30%;
   margin-left: 30%;
 }
@@ -214,7 +207,7 @@ main{
   margin-left: 5%;
   margin-right: 5%;
   padding: 10px;
-}*/
+}
 
 .footer {
    left: 0;
