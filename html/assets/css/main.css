@@ -88,7 +88,9 @@ main{
   color: white;
 }
 
+
 /*Referenced https://www.w3schools.com/csS/css3_buttons.asp*/
+/*
 .dbButtons {
   margin-left:25%;
   margin-right:25%;
@@ -96,7 +98,6 @@ main{
 
 .dbButtons button {
   width: 50%;
-/*  background-color: #00008B;*/
   background-color: #1E90FF;
   border: 1px solid black;
   color: white;
@@ -111,7 +112,6 @@ main{
   padding: 5px;
 }
 
-
 .dbButtons button:hover {
   background-color: #00008B;
 }
@@ -121,6 +121,12 @@ main{
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
+*/
+
+
+
+
+
 
 /*.button-group {
   margin-right: 10%;
@@ -151,6 +157,7 @@ main{
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }*/
+
 
 
 .placeholder-group {
