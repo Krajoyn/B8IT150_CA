@@ -125,17 +125,6 @@ main{
 /*.button-group {
   margin-right: 10%;
   margin-left: 10%;
-}*/
-
-.button-group {
-  height: 100%;
-  width: 200px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
 }
 
 .button-group button {
@@ -161,7 +150,39 @@ main{
   background-color: #00008B;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
+}*/
+
+
+.button-group {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
 }
+
+
+/* Side navigation links */
+.button-group button {
+  color: white;
+  padding: 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color on hover */
+.button-group button:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+
+
+
+
 
 .placeholder-group {
   margin-right: 30%;
