@@ -271,7 +271,7 @@ footer {
 
 
 .image-container {
-  background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.willmottdixon.co.uk%2Fasset%2F11559&f=1&nofb=1"); /* The image used - important! */
+  background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0706%2F6071%2Fproducts%2FF_9f827968-cebc-48d1-8cfc-95a8cf257498_2000x.jpg%3Fv%3D1565049028&f=1&nofb=1"); /* The image used - important! */
   background-size: cover;
   position: relative; /* Needed to position the cutout text in the middle of the image */
   height: 300px; /* Some height */
