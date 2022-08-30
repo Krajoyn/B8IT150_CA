@@ -271,7 +271,7 @@ footer {
 
 
 .image-container {
-  background-image: url("/assets/images/building1.jpg"); /* The image used - important! */
+  background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.willmottdixon.co.uk%2Fasset%2F11559&f=1&nofb=1"); /* The image used - important! */
   background-image: src("/assets/images/building1.jpg"); /* The image used - important! */
   background-image: src="/assets/images/building1.jpg"; /* The image used - important! */
   background-size: cover;
