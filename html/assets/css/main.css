@@ -122,6 +122,13 @@ h2{
 .button-group {
   margin-right: 10%;
   margin-left: 10%;
+
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: yellow;
+  padding: 50px;
+  font-size: 20px;
 }
 
 .button-group button {
@@ -217,13 +224,6 @@ footer {
   float: left;
   width: 33.33%;
   padding: 10px;
-  
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  background-color: yellow;
-  padding: 50px;
-  font-size: 20px;
 }
 
 /* Clear floats after the columns */
