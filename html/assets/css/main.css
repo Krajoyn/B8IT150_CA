@@ -159,6 +159,13 @@ h2{
 .placeholder-group {
   margin-right: 30%;
   margin-left: 30%;
+
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: yellow;
+  padding: 50px;
+  font-size: 20px;
 }
 
 .placeholder-group input {
@@ -224,6 +231,7 @@ footer {
   float: left;
   width: 33.33%;
   padding: 10px;
+  height: 100%;
 }
 
 /* Clear floats after the columns */
