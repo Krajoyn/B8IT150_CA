@@ -31,27 +31,7 @@ h2{
 }
 
 
-.content:after {
-  content: "";
-  display: table;
-  clear: both;
-}
 
-/* Create three unequal columns that floats next to each other */
-.column {
-  float: left;
-  padding: 10px;
-}
-
-/* Left and right column */
-.column-left {
-  width: 33%;
-}
-
-/* Middle column */
-.column-right {
-  width: 66%;
-}
 
 
 #studentTable caption {
