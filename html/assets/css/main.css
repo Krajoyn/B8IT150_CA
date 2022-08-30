@@ -240,3 +240,19 @@ footer {
 
 
 
+
+
+
+
+.main-block {
+      flex-direction: row;
+      height: calc(100% - 50px);
+      }
+      .left-part, form {
+      flex: 1;
+      height: auto;
+      }
+
+
+
+
