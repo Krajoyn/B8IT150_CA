@@ -9,6 +9,14 @@
   }
 }
 
+#wrapper{
+  float: left;
+  width: 100%;
+  min-height: 100%;
+  padding-bottom: 250px;
+  box-sizing: border-box;
+}
+
 html, body{
   height: 100%
 }
@@ -342,9 +350,9 @@ float: left;
   top: 8%;
   left: 50%;
   transform: translate(-50%, -50%);
-    width: 141px;
-    height: 141px;
-    overflow: hidden;
+  width: 141px;
+  height: 141px;
+  overflow: hidden;
 }
 
 /* NAVIGATION LINKS FOR ALL PAGES */
