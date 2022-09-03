@@ -370,3 +370,32 @@ li.nav-link-buttons{
   width: 100%;
   margin: 0 auto;
 }
+
+@media only screen and (max-width: 600px){
+  .narrow-menu{
+    display: block;
+  }
+  ul.nav-links{
+    margin: 0;
+    width: 100%;
+    display: none;
+  }
+  li.nav-link-buttons, li.nav-link-buttons-active{
+    width: 100%;
+    margin-left: 0px;
+  }
+  span#narrow-menu-title{
+    text-align: right;
+    float: left;
+    width: 100%;
+    height: 50px;
+    padding-bottom: 10px;
+    font-size: 18px;
+    padding-top: 17px;
+    padding-right: 30px;
+    font-weight: bolder;
+    box-sizing: border-box;
+  }
+  .hide-nav{
+    display: none;
+  }
