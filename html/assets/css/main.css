@@ -206,6 +206,12 @@ header{
 }
 
 
+main{
+  float: left;
+  width: 100%;
+  height: auto;
+}
+
 /* Footer menus */
 
 footer{
@@ -383,15 +389,18 @@ a:link li.nav-link-buttons{
   color: #7D8E95;
   background: #FFBB98;
 }
+
 a:hover li.nav-link-buttons{
   color: #7D8E95;
   background: #F2F5E0;
   text-decoration: underline;
 }
+
 a:active li.nav-link-buttons{
   color: #7D8E95;
   background: #F2E0D9;
 }
+
 li.nav-link-buttons{
   display: inline;
   list-style-type: none;
@@ -421,6 +430,7 @@ li.nav-link-buttons{
   .narrow-menu{
     display: block;
   }
+
   ul.nav-links{
     margin: 0;
     width: 100%;
@@ -442,7 +452,7 @@ li.nav-link-buttons{
     font-weight: bolder;
     box-sizing: border-box;
   }
-  
+
   .hide-nav{
     display: none;
   }
