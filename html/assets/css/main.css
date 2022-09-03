@@ -293,3 +293,80 @@ footer {
   mix-blend-mode: screen; /* This makes the cutout text possible */
 }
 
+
+
+
+
+/* LOGO */
+.nav-logo{
+  float: none;
+  position: absolute;
+  top: 8%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+    width: 141px;
+    height: 141px;
+    overflow: hidden;
+}
+
+/* NAVIGATION LINKS FOR ALL PAGES */
+
+ul.nav-links{
+  float: none;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-55%, -50%);
+
+}
+li.nav-link-buttons-active{
+  display: inline;
+  list-style-type: none;
+  float: left;
+  width: 110px;
+  height: 43px;
+  background: #FBE0C3;
+  margin-left: 5px;
+  font-size: 18px;
+  text-align: center;
+  padding-top: 17px;
+  color: #black;
+
+}
+a:link li.nav-link-buttons{
+  color: #7D8E95;
+  background: #FFBB98;
+}
+a:hover li.nav-link-buttons{
+  color: #7D8E95;
+  background: #F2F5E0;
+  text-decoration: underline;
+}
+a:active li.nav-link-buttons{
+  color: #7D8E95;
+  background: #F2E0D9;
+}
+li.nav-link-buttons{
+  display: inline;
+  list-style-type: none;
+  float: left;
+  width: 110px;
+  height: 43px;
+  margin-left: 5px;
+  font-size: 18px;
+  text-align: center;
+  padding-top: 17px;
+
+}
+
+.narrow-menu-outer{
+  float: left;
+  width: 100%;
+  height: auto;
+}
+.narrow-menu{
+  display: none;
+  height: auto;
+  width: 100%;
+  margin: 0 auto;
+}
