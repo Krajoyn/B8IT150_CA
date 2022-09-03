@@ -370,14 +370,14 @@ img.homepic-image{
 
 /* NAVIGATION LINKS FOR ALL PAGES */
 
-ul.nav-links{
+/*ul.nav-links{
   float: none;
   position: absolute;
   top: 20%;
   left: 50%;
   transform: translate(-55%, -50%);
+}*/
 
-}
 li.nav-link-buttons-active{
   display: inline;
   list-style-type: none;
@@ -390,8 +390,8 @@ li.nav-link-buttons-active{
   text-align: center;
   padding-top: 17px;
   color: #black;
-
 }
+
 a:link li.nav-link-buttons{
   color: #7D8E95;
   background: #FFBB98;
