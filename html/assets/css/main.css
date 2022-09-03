@@ -309,23 +309,23 @@ float: left;
 
 /* IMAGE OF University */
 
-/*.homepic-outer{
+.homepic-outer{
   float: left;
   width: 100%;
   height: 850px;
   padding-top: 50px;
-}*/
+}
 
-/*.homepic-inner{
+.homepic-inner{
   width: 1280px;
   height: 853px;
   margin: 0 auto;
 }
-*/
-/*img.homepic-image{
+
+img.homepic-image{
     max-width: 100%;
   }
-*/
+
 
 
 
