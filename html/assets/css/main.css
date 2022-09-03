@@ -3,32 +3,26 @@
   box-sizing: border-box;
 }
 
-
-/*@media (max-width: 600px) {
+@media (max-width: 600px) {
   .column.side, .column.middle {
     width: 100%;
   }
 }
-*/
+
 
 
 @media only screen and (max-width: 600px){
   .narrow-menu{
     display: block;
   }
-  .column.side, .column.middle {
-    width: 100%;
-  }
-  .column {
-    width: 100%;
 }
 
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other 
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
 @media (max-width: 600px) {
   .column {
     width: 100%;
   }
-*/
+
 
 
 
