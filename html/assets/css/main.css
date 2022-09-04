@@ -365,7 +365,7 @@ img.homepic-image{
 
 body {
  font-family: cursive;
- background-image: url(../images/building1.jpg);
+ background-image: url(/images/building1.jpg);
 }
 
 a {
