@@ -19,7 +19,6 @@
 
 html, body{
   height: 100%
-  background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.nI0YocbKuw2038jFv_VDfQHaD4%26pid%3DApi&f=1);
 }
 
 h1{
@@ -366,6 +365,7 @@ img.homepic-image{
 
 body {
  font-family: cursive;
+ background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.avxhtQqr5FoubGjq4sIXugHaEo%26pid%3DApi&f=1);
 }
 
 a {
