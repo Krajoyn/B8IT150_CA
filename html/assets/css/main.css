@@ -33,7 +33,7 @@ h2{
 .header {
   padding: 60px;
   text-align: center;
-  background: #800000;
+  background: #00B3B3;
   color: white;
   font-size: 30px;
 }
@@ -311,27 +311,9 @@ float: left;
   padding: 25px;
   margin: 0 auto;
   text-align: center;
+  color: white;
 }
 
-
-/* IMAGE OF University */
-
-.homepic-outer{
-  float: left;
-  width: 100%;
-  height: 850px;
-  padding-top: 50px;
-}
-
-.homepic-inner{
-  width: 1280px;
-  height: 853px;
-  margin: 0 auto;
-}
-
-img.homepic-image{
-    max-width: 100%;
-  }
 
 .center {
   display: block;
@@ -365,7 +347,7 @@ img.homepic-image{
 
 body {
  font-family: cursive;
- background-image: url(https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Fwww.thoughtco.com%2Fthmb%2FCeg53uDmYk3BSVUpQKhBOtuyJuY%3D%2F2132x1199%2Fsmart%2Ffilters%3Ano_upscale%28%29%2FGettyImages-537641982-5962450b3df78cdc68baa219.jpg&sp=1662305516T01e0821755013834f3e5bd49fbe702a980a8f7ac29733eb64e1e672effce6b6c);
+ background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdnassets.hw.net%2Ffd%2F46%2F6c192e704a87bc5b40b35e01d719%2F8077f11a3ba64171a871616d6ecdc652.jpg&f=1&nofb=1);
  background-repeat: no-repeat;
  background-attachment: fixed;
  background-size: cover;
@@ -481,3 +463,66 @@ input[type=checkbox]:checked ~ .menu{
 }
 
 
+
+/*Referenced previous DBS project*/
+/* CONTACT FORM */
+
+#contact-form-outer{
+  float: left;
+  width: 100%;
+  height: auto;
+  padding-top: 50px;
+}
+#contact-form-inner{
+  width: 380px;
+  height: auto;
+  padding: 25px;
+  margin: 0 auto;
+}
+input{
+  width: 380px;
+  height: 20px;
+  margin: 5px 0px 5px 0px;
+  display: block;
+  font-size: 15px;
+  border-radius: 2px;
+  font-family: 'Open Sans', sans-serif;
+  border-color: #dddddd;
+}
+textarea{
+  width: 380px;
+  height: auto;
+  margin: 5px 0px 5px 0px;
+  display: block;
+  font-size: 15px;
+  border-radius: 2px;
+  font-family: 'Open Sans', sans-serif;
+  border-color: #dddddd;
+  resize: vertical;
+}
+input[type=submit]{
+  height: 50px;
+  background: #dae6ee;
+  border: none;
+  border-radius: 4px;
+  margin: 8px 2px;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+}
+input[type=submit]:hover{
+  text-decoration: underline;
+}
+
+p#error-list{
+  display: none;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
