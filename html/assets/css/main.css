@@ -19,6 +19,7 @@
 
 html, body{
   height: 100%
+  background-image: url(assets/images/building2);
 }
 
 h1{
@@ -366,6 +367,7 @@ img.homepic-image{
 body {
  font-family: cursive;
 }
+
 a {
  text-decoration: none;
 }
