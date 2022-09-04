@@ -52,13 +52,14 @@
 
        <!-- NAVIGATION MENUS -->
        <div class="menu">
-         <li><a href="index.html">Home</a></li>
-         <li><a href="database/index.html">Database</a></li>
-         <li><a href="staff/index.html">Staff</a></li>
-         <li><a href="support/index.html">Support</a></li>
+         <li><a href="../index.html">Home</a></li>
+         <li><a href="../database/index.html">Database</a></li>
+         <li><a href="../staff/index.html">Staff</a></li>
+         <li><a href="index.html">Support</a></li>
        </div>
      </ul>
    </nav>
+
 
 
 
@@ -67,7 +68,7 @@
 
       <div class="header">
 
-        <img src="../assets/images/school.jpg" alt="university building picture">
+        <img src="assets/images/school.jpg" alt="university building picture">
 
         <h1>Welcome to the Staff Portal</h1>
 
@@ -81,38 +82,61 @@
             <div class="text-outer">
 
               <div class="text-inner">
-                &nbsp;
-                &nbsp;
-                <img src="../assets/images/helpdesk.jpg" class="center" alt="image of helpdesk logo">
-                <br>
 
-                <h2>Contact Tech Support</h2>
-                <h3>Alternatively talk to your administrator</h3>
+<!-- Referenced https://www.w3schools.com/howto/howto_css_contact_section.asp -->
 
+               <div class="container">
+                <div style="text-align:center">
+                  <h2>Contact IT Support</h2>
+                  <p>Alternatively speak to your administrator</p>
+                </div>
+                <div class="supportrow">
+                  <div class="supportcolumn">
+                    <img src="../assets/images/helpdesk.jpg" style="width:100%">
+                  </div>
 
-                <div id="contact-form-outer">
+                  <div class="supportcolumn">
+                    <form action="/action_page.php">
+                      <label for="fname">First Name</label>
+                      <input type="text" id="fname" name="firstname" placeholder="Your name..">
 
-                  <div id="contact-form-inner">
+                      <label for="lname">Last Name</label>
+                      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
 
-                    <h1 id="heading">Contact Us</h1>
-                    <p>Use the form below to report IT issues.</p>
-                    <p>Or e-mail us at helpdesk@XXschool.ie</p>
+                      <label for="phone">Phone</label>
+                      <input type="text" id="phone" name="phone" placeholder="Your phone number">
 
+                      <label for="email">Email</label>
+                      <input type="text" id="email" name="email" placeholder="Your email">
 
-                    <form id="contact-form">
-                      <input type="text" name="fullname" id="fullname" placeholder="Enter your full name"><br>
-                      <input type="email" name="email" id="email" placeholder="Enter your e-mail address"><br>
-                      <textarea name="description" id="description" placeholder="Describe your issue"></textarea><br>
+                      <p> When did issue begin</p>
+                      <input type="date" name="check-out-date" id="check-out-date">
+                      <input type="time" name="check-out-time" id="check-out-time">
+
+                      <label for="office">Office</label>
+                      <select id="office" name="office">
+                        <option value="office1">Office 1</option>
+                        <option value="office2">Office 2</option>
+                        <option value="office3">Office 3</option>
+                      </select>
+
+                      <label for="subject">Subject</label>
+
+                      <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+
                       <input type="submit" value="Submit">
-
-                      <p id="error-list"> You have (<span id="error-count"></span>) errors.</p>
-
                     </form>
                   </div>
-              </div>
+                </div>
+              </div> 
 
+                <br>
+                <br>
+                &nbsp;
+                <img src="../assets/images/crest.jpg" alt="A picture of school crest">
 
-              
+                
+
               </div>
             </div>
 
@@ -145,7 +169,6 @@
 
   </footer>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script type="text/javascript" src="../assets/js/main.js"></script>
+</body>
 
 </html>

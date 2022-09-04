@@ -302,7 +302,6 @@ float: left;
   width: 100%;
   height: auto;
   padding-top: 50px;
-
 }
 
 .text-inner {
@@ -338,6 +337,8 @@ float: left;
 
 
 
+/*Referenced from https://www.makeuseof.com/responsive-navigation-bar-using-html-and-css/
+*/
 
 * {
  margin: 0;
@@ -464,65 +465,109 @@ input[type=checkbox]:checked ~ .menu{
 
 
 
-/*Referenced previous DBS project*/
-/* CONTACT FORM */
 
-#contact-form-outer{
-  float: left;
+
+/*Referenced https://www.w3schools.com/howto/howto_css_contact_section.asp*/
+/*CONTACT FORM*/
+/* Style inputs */
+
+input[type=text], select, textarea {
   width: 100%;
-  height: auto;
-  padding-top: 50px;
-}
-#contact-form-inner{
-  width: 380px;
-  height: auto;
-  padding: 25px;
-  margin: 0 auto;
-}
-input{
-  width: 380px;
-  height: 20px;
-  margin: 5px 0px 5px 0px;
-  display: block;
-  font-size: 15px;
-  border-radius: 2px;
-  font-family: 'Open Sans', sans-serif;
-  border-color: #dddddd;
-}
-textarea{
-  width: 380px;
-  height: auto;
-  margin: 5px 0px 5px 0px;
-  display: block;
-  font-size: 15px;
-  border-radius: 2px;
-  font-family: 'Open Sans', sans-serif;
-  border-color: #dddddd;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
   resize: vertical;
 }
-input[type=submit]{
-  height: 50px;
-  background: #dae6ee;
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
   border: none;
-  border-radius: 4px;
-  margin: 8px 2px;
   cursor: pointer;
-  font-family: 'Roboto', sans-serif;
-}
-input[type=submit]:hover{
-  text-decoration: underline;
 }
 
-p#error-list{
-  display: none;
+input[type=submit]:hover {
+  background-color: #teal;
 }
 
-@-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+/* Style the container/contact section */
+.container {
+  border-radius: 5px;
+  background-color: teal;
+  padding: 10px;
 }
 
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+/* Create two columns that float next to eachother */
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+
+
+
+
+
+/*Referenced from https://www.w3schools.com/howto/howto_css_portfolio_gallery.asp*/
+
+.row {
+  margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column (if you want) */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 20%;
+}
+
+/* Clear floats after rows */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: teal;
+  padding: 10px;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .column {
+    width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
 }
