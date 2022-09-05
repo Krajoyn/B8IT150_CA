@@ -33,27 +33,31 @@
 </head>
 
 
-<body1>
+<body>
 
-  <nav class="navbar">
+<!-- Referenced from https://www.makeuseof.com/responsive-navigation-bar-using-html-and-css/ -->
+
+    <nav class="navbar">
      <!-- LOGO -->
-      <div class="logo">XX School</div>
+     <div class="logo">XX School</div>
 
-       <!-- NAVIGATION MENU -->
-       <ul class="nav-links">
-         <!-- USING CHECKBOX HACK -->
-         <input type="checkbox" id="checkbox_toggle" />
-         <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+     <!-- NAVIGATION MENU -->
+     <ul class="nav-links">
+       <!-- USING CHECKBOX HACK -->
+       <input type="checkbox" id="checkbox_toggle" />
+       <label for="checkbox_toggle" class="hamburger">&#9776;</label>
 
-         <!-- NAVIGATION MENUS -->
-         <div class="menu">
-           <li><a href="../index.html">Home</a></li>
-           <li><a href="index.html">Database</a></li>
-           <li><a href="../staff/index.html">Staff</a></li>
-           <li><a href="../support/index.html">Support</a></li>
+       <!-- NAVIGATION MENUS -->
+       <div class="menu">
+         <li><a href="../index.html">Home</a></li>
+         <li><a href="index.html">Database</a></li>
+         <li><a href="../staff/index.html">Staff</a></li>
+         <li><a href="../support/index.html">Support</a></li>
        </div>
      </ul>
    </nav>
+
+
 
   <div class="header">
     <<img src="../assets/images/school.jpg" alt="school building picture">
@@ -340,7 +344,7 @@
 
 
   <script>
-    let baseURL='https://akdbs.southindia.cloudapp.azure.com:8080/';
+    let baseURL='https://akdbs.southindia.cloudapp.azure.com/database:8080/';
     let id=document.querySelector('input');
 
   // ADD STUDENT
@@ -516,6 +520,6 @@ function editRow()
 
 
 
-</body1>
+</body>
 
 </html>
