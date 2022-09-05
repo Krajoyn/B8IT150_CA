@@ -5,30 +5,31 @@
   <meta name="viewport" content="width=device-width">
   <link rel="stylesheet" type="text/css" href="../assets/css/main.css">
   <title>Student Database DBS CA B8IT150</title>
+  
   <script>
-  let doIt=()=>{
-  let tab=document.getElementById("studentTable");
-  let rows=studentTable.getElementsByTagName('th');
-  fetch('https://akdbs.southindia.cloudapp.azure.com:8080/')
-  .then(response => response.json())
-  .then(data=>{data.Results.forEach(
-  x=>{
-  let newRow=rows[0].cloneNode(true);
-  let divs=newRow.getElementsByTagName('th');
-  divs[0].innerHTML=x['ID'];
-  divs[1].innerHTML=x['Name'];
-  divs[2].innerHTML=x['Email'];
-  divs[3].innerHTML=x['DOB'];
-  divs[4].innerHTML=x['Course'];
-  divs[5].innerHTML=x['Phone'];
-  divs[6].innerHTML=x['Address'];
-  studentTable.appendChild(newRow);
-  }
-  );
-  studentTable.setAttribute("style","\"\"");
-  }
-  );
-  }
+    let doIt=()=>{
+    let tab=document.getElementById("studentTable");
+    let rows=studentTable.getElementsByTagName('tr');
+    fetch('https://akdbs.southindia.cloudapp.azure.com:8080/')
+    .then(response => response.json())
+    .then(data=>{data.Results.forEach(
+    x=>{
+    let newRow=rows[0].cloneNode(true);
+    let divs=newRow.getElementsByTagName('th');
+    divs[0].innerHTML=x['ID'];
+    divs[1].innerHTML=x['Name'];
+    divs[2].innerHTML=x['Email'];
+    divs[3].innerHTML=x['DOB'];
+    divs[4].innerHTML=x['Course'];
+    divs[5].innerHTML=x['Phone'];
+    divs[6].innerHTML=x['Address'];
+    studentTable.appendChild(newRow);
+    }
+    );
+    studentTable.setAttribute("style","\"\"");
+    }
+    );
+    }
   </script>
 </head>
 
