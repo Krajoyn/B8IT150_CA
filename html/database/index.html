@@ -8,8 +8,8 @@
   <script>
   let doIt=()=>{
   let tab=document.getElementById("studentTable");
-  let rows=studentTable.getElementsByTagName('tr');
-  fetch('https://akdbs.southindia.cloudapp.azure.com:8080/database/index.html')
+  let rows=studentTable.getElementsByTagName('th');
+  fetch('https://akdbs.southindia.cloudapp.azure.com:8080/')
   .then(response => response.json())
   .then(data=>{data.Results.forEach(
   x=>{
