@@ -60,6 +60,90 @@
 
 
 
+
+
+
+
+
+<!-- Referenced from https://www.w3schools.com/Css/tryit.asp?filename=trycss_template2_grid -->
+  <!-- <div class="content"> -->
+    <div class="column-side">
+      <table id='studentTable' data-filter-control="true" >
+        <caption>Student Database
+          <br>
+          <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter student name to search" title="Type in a name">
+          <br>
+          <br>
+          <br>
+      
+        <div class="dbButtons">
+          <button onClick="doIt()">Display Student Database</button>
+
+     <!-- Referenced https://www.w3docs.com/snippets/javascript/how-to-reload-a-page-using-javascript.html -->
+          <button onClick="window.location.reload(true)">Refresh</button>
+        </div>
+
+        </caption>
+        <thead>
+          <tr>
+            <th onclick="sortTable(0)">ID</th>
+            <th onclick="sortTable(1)">Name</th>
+            <th onclick="sortTable(2)">Email</th>
+            <th onclick="sortTable(3)">DOB</th>
+            <th onclick="sortTable(4)">Course</th>
+            <th onclick="sortTable(5)">Phone</th>
+            <th onclick="sortTable(6)">Address</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+
+
+    <div class="column-right">
+      <div class="placeholder-group">
+        <h2>Student Form</h2>
+        <div class="button-group">
+          <button onClick="addStudent()">Add</button>
+          <button onClick="deleteStudent()">Delete</button>
+          <button onClick="updateStudent()">Update</button>
+        </div>
+        <br/>
+        <br/>
+          <input placeholder="Student ID" type='int' id='Id' onfocus="this.value=''">
+          <input placeholder="Student Name" type='text' id='Name' onfocus="this.value=''">
+          <input placeholder="Student Email" type='email' id='Email' pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" onfocus="this.value=''">
+          <input placeholder="Student DOB (DD/MM/YYYY)" type='date' id='DOB' onfocus="this.value=''">
+          <input placeholder="Student Course" type='text' id='Course' onfocus="this.value=''">
+          <input placeholder="Student Phone" type='int' id='Phone' onfocus="this.value=''">
+          <input placeholder="Student Address" type='text' id='Address' onfocus="this.value=''">
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   <div id="wrapper">
 
       <div class="header">
