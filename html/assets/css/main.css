@@ -79,7 +79,7 @@ h2{
 
 /*Taken from https://www.w3schools.com/Css/css_table_style.asp*/
 #studentTable tr:nth-child(even) {
-  background-color: #black;}
+  background-color: #fff;}
 
 /*Taken from https://www.w3schools.com/Css/css_table_style.asp*/
 #studentTable tr:hover {
@@ -271,7 +271,7 @@ footer{
 
 
 
-
+/*DELETE?*/
 /* Create three equal columns that floats next to each other */
 .column {
   float: left;
