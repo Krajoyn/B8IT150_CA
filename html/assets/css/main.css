@@ -79,12 +79,12 @@ h2{
 
 /*Taken from https://www.w3schools.com/Css/css_table_style.asp*/
 #studentTable tr:nth-child(even) {
-  background-color: #fff;}
+  background-color: #black;}
 
 /*Taken from https://www.w3schools.com/Css/css_table_style.asp*/
 #studentTable tr:hover {
   background-color: #teal;
-  color: black;
+  color: white;
 }
 
 
