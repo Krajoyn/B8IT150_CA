@@ -248,13 +248,11 @@ footer{
 }
 
 #footer-copyright{
-  width: 30%;
   float: left;
   text-align:center;
   border:1px;
   width:514px;
   color: #fff;
-  padding-left: 500px;
 }
 
 
