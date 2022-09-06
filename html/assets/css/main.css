@@ -168,13 +168,13 @@ h2{
 }
 
 .placeholder-group {
-  margin-right: 30%;
-  margin-left: 30%;
+  margin-right: 15%;
+  margin-left: 15%;
 
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  background-color: yellow;
+  background-color: teal;
   padding: 50px;
   font-size: 20px;
 }
@@ -190,7 +190,7 @@ h2{
 
 .placeholder-group h2 {
   color: white;
-  background-color: #00008B;
+  background-color: #4C9E9E;
   text-align: center;
   display: block;
   width: 90%;
