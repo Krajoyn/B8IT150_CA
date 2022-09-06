@@ -82,7 +82,7 @@ h2{
   background-color: #802B00;}
 
 #studentTable tr:nth-child(odd) {
-  background-color: #800000;}
+  background-color: #4C9E9E;}
 
 /*Taken from https://www.w3schools.com/Css/css_table_style.asp*/
 #studentTable tr:hover {
