@@ -137,14 +137,14 @@ h2{
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  background-color: yellow;
+  background-color: teal;
   padding: 50px;
   font-size: 20px;
 }
 
 .button-group button {
   width: 33.33%;
-  background-color: #1E90FF;
+  background-color: #00FFFF;
   border: 1px solid black;
   color: white;
   padding: 15px 30px;
