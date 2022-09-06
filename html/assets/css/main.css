@@ -248,6 +248,7 @@ footer{
 }
 
 #footer-copyright{
+  width: 30%;
   float: left;
   text-align:center;
   border:1px;
