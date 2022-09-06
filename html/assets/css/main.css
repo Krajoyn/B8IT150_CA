@@ -81,6 +81,9 @@ h2{
 #studentTable tr:nth-child(even) {
   background-color: #802B00;}
 
+#studentTable tr:nth-child(odd) {
+  background-color: #007F80;}
+
 /*Taken from https://www.w3schools.com/Css/css_table_style.asp*/
 #studentTable tr:hover {
   background-color: #teal;
