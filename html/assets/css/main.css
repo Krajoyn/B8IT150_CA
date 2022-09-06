@@ -52,7 +52,7 @@ h2{
 }
 
 #studentTable {
-  background-color: #yellow;
+  background-color: #teal;
   border-collapse: collapse;
   margin-left: auto;
   margin-right: auto;
@@ -67,7 +67,7 @@ h2{
 
 #studentTable thead {
   height: 50px;
-  background-color: #blue;
+  background-color: #yellow;
 }
 
 
