@@ -589,12 +589,12 @@ Referenced from https://www.w3schools.com/howto/howto_css_team.asp*/
 }
 
 /* Display the columns below each other instead of side by side on small screens */
-@media screen and (max-width: 650px) {
+/*@media screen and (max-width: 650px) {
   .column {
     width: 100%;
     display: block;
   }
-}
+}*/
 
 /* Add some shadows to create a card effect */
 .card {
