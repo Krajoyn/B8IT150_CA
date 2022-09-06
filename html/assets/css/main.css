@@ -232,14 +232,14 @@ footer{
 
 .footer-about{
  float:left;
- width: 30%;  
+ width: 40%;  
  border:10px;
  padding:10px;
  color: #fff;
 }
 
 .footer-contact{
- width: 30%;        
+ width: 40%;        
  float:right;
  text-align:justify;
  border:10px;
