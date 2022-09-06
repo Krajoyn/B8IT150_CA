@@ -239,7 +239,7 @@ footer{
 }
 
 .footer-contact{
- width: 10%;        
+ width: 30%;        
  float: right;
  text-align:justify;
  border:10px;
@@ -254,6 +254,7 @@ footer{
   border:1px;
   width:514px;
   color: #fff;
+  padding-left: 10%;
 }
 
 
