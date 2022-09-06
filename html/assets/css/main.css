@@ -239,8 +239,8 @@ footer{
 }
 
 .footer-contact{
- width: 30%;        
- float:right;
+ width: 10%;        
+ float: right;
  text-align:justify;
  border:10px;
  padding:10px;
@@ -248,7 +248,7 @@ footer{
 }
 
 #footer-copyright{
-  float:right;
+  float: left;
   text-align:center;
   border:1px;
   width:514px;
