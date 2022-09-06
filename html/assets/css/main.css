@@ -44,7 +44,7 @@ h2{
 
 #studentTable caption {
   font-size: 100;
-  background: purple;
+  background: teal;
   color: white;
   text-align: center;
   font-weight: bold;
@@ -52,7 +52,7 @@ h2{
 }
 
 #studentTable {
-  background-color: #1E90FF;
+  background-color: #4C9E9E;
   border-collapse: collapse;
   margin-left: auto;
   margin-right: auto;
