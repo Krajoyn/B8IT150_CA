@@ -133,13 +133,13 @@ h2{
 .button-group {
   margin-right: 10%;
   margin-left: 10%;
-
+/*
   position: -webkit-sticky;
   position: sticky;
   top: 0;
   background-color: teal;
   padding: 50px;
-  font-size: 20px;
+  font-size: 20px;*/
 }
 
 .button-group button {
@@ -171,12 +171,12 @@ h2{
   margin-right: 15%;
   margin-left: 15%;
 
-  position: -webkit-sticky;
+/*  position: -webkit-sticky;
   position: sticky;
   top: 0;
   background-color: teal;
   padding: 50px;
-  font-size: 20px;
+  font-size: 20px;*/
 }
 
 .placeholder-group input {
