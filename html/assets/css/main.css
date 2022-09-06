@@ -483,7 +483,7 @@ input[type=submit]:hover {
 /* Create two columns that float next to eachother */
 .column {
   float: left;
-  width: 50%;
+  width: 25%;
   margin-top: 6px;
   padding: 20px;
 }
@@ -564,7 +564,7 @@ Referenced from https://www.w3schools.com/howto/howto_css_team.asp*/
  /* Three columns side by side */
 .column {
   float: left;
-  width: 33.3%;
+  width: 20%;
   margin-bottom: 16px;
   padding: 0 8px;
 }
