@@ -87,7 +87,7 @@ h2{
 /*Taken from https://www.w3schools.com/Css/css_table_style.asp*/
 #studentTable tr:hover {
   background-color: #yellow;
-  color: white;
+  color: blue;
 }
 
 
