@@ -56,12 +56,12 @@ h2{
   border-collapse: collapse;
   margin-left: auto;
   margin-right: auto;
-  min-width: 650px;
+  min-width: 500px;
   overflow: hidden;
   text-align: center;
   font-weight: lighter;
-  border: 1px solid;
-  border-color: #00008B;
+/*  border: 1px solid;
+  border-color: #00008B;*/
 }
 
 
